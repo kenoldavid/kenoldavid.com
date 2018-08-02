@@ -1,0 +1,37 @@
+//
+// Flags
+//
+$show-home-image: true;
+
+//
+// Images
+//
+$home-image: url(file:///C:/Users/Ken/Sites/kenoldavid/dist/img/bg-6.jpg);
+
+$background-opacity: 0.9;
+
+
+//
+// Color system
+//
+
+$primary:       #444;
+$secondary:   #eece1a !important;
+
+$primary-color: $primary;
+$secondary-color: $secondary;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-color:                $primary-color;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $white;
+$link-hover-color:          $secondary-color;
+$link-hover-decoration:     none;
