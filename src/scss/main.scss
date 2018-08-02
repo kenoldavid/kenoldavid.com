@@ -16,35 +16,29 @@
 
 
 /* 
-    VARIABLES -  
-*/
-@import 'variables/_variables.scss';
+ *   VARIABLES -  
+ */
+@import 'variables/_variables';
 
 /* 
     MIXINS -  
 */
-@import 'mixins/_mixins.scss';
+@import 'mixins/_mixins';
 
 /* 
     BASE - Base styles 
 */
-@import 'base/_base.scss';
+@import 'base/_base';
 
 /*
     MODULES - Individual site components 
 */
-@import 'modules/_typography.scss';
-@import 'modules/_blocks.scss';
-@import 'modules/_buttons.scss';
-@import 'modules/_sections.scss';
-@import 'modules/_components.scss';
+@import 'modules/_typography';
+@import 'modules/_blocks';
+@import 'modules/_buttons';
+@import 'modules/_sections';
+@import 'modules/_components';
 
-/*
-    LAYOUTS - layout styles 
-*/
-@import 'layout/_nav.scss';
-@import 'layout/_header.scss';
-@import 'layout/_footer.scss';
 
 
 
