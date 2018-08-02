@@ -10,7 +10,8 @@ h4, h5, h6 {
     &.sm-heading {
         font-size: 2rem;
         margin-bottom: 2rem;
-        padding: 0.2rem 1rem;        
+        padding: 0.2rem 1rem;   
+        background: rgba(lighten($primary-color, 2), 0.2);     
     }
 }
 
