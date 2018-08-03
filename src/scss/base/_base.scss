@@ -6,13 +6,23 @@ body {
     color: set-text-color($primary-color);
     height: 100vh;
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    // line-height: 1.5;
 }
 
 header {
     position: fixed;
+    width: 100%;
     z-index: 2;
-    width: 100%
 }
+
+main {
+    min-height: calc(100vh - 60px);
+    padding: 4rem;
+}
+
+/* footer {
+
+} */
 
 /*
     LAYOUTS - layout styles 
@@ -24,4 +34,5 @@ header {
 /*
     PAGES - Indiviual page styles 
 */
-@import '../pages/_home.scss';
+@import '../pages/_home';
+@import '../pages/_about';

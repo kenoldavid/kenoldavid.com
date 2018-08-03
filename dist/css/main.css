@@ -2272,46 +2272,6 @@ a.text-dark:hover, a.text-dark:focus {
     MIXINS -  
 */
 /* 
-    MOBILE - Screens media
-*/
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; } }
-
-@media screen and (max-width: 575.98px) {
-  header .menu-nav,
-  header .menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    header .menu-nav.show,
-    header .menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  header .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    header .menu-branding .portrait {
-      width: 150px;
-      height: 150px; }
-  header .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0); }
-    header .menu-nav .nav-link {
-      font-size: 24px;
-      font-weight: 400; }
-  main {
-    padding: 5.5rem .1rem !important;
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; } }
-
-/* 
     BASE - Base styles 
 */
 body {
@@ -2337,9 +2297,16 @@ body {
 
 header {
   position: fixed;
-  z-index: 2;
-  width: 100%; }
+  width: 100%;
+  z-index: 2; }
 
+main {
+  min-height: calc(100vh - 60px);
+  padding: 4rem; }
+
+/* footer {
+
+} */
 /*
     LAYOUTS - layout styles 
 */
@@ -2402,7 +2369,7 @@ header {
       height: 250px;
       background-image: url(../../../dist/img/portrait.jpg);
       border-radius: 50%;
-      border: solid 3px #eece1a !important;
+      border: solid 3px #eece1a;
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat; }
@@ -2412,7 +2379,7 @@ header {
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a !important; }
+      color: #eece1a; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -2423,7 +2390,7 @@ header {
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a !important; }
+      color: #eece1a; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -2440,21 +2407,65 @@ header {
 /*
     PAGES - Indiviual page styles 
 */
-main {
-  padding: 5.5rem;
-  height: 100%; }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: #eece1a !important;
-        text-decoration: none;
-        transition: all 0.5s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 10vh; }
+main .icons {
+  margin-top: 1rem; }
+  main .icons a {
+    padding: 0.4rem; }
+    main .icons a:hover {
+      color: #eece1a;
+      text-decoration: none;
+      transition: all 0.5s ease-out; }
+
+main#home {
+  overflow: hidden; }
+  main#home h1 {
+    margin-top: 20vh; }
+
+main#about .about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+
+main#about .bio-image {
+  grid-area: bioimage;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  border: solid 3px #eece1a; }
+
+main#about .bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+main#about .job-1 {
+  grid-area: job1; }
+
+main#about .job-2 {
+  grid-area: job2; }
+
+main#about .job-3 {
+  grid-area: job3; }
+
+main#about .job {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: solid 5px #eece1a; }
+  main#about .job h3, main#about .job h6 {
+    padding-bottom: 15px;
+    text-transform: capitalize; }
+  main#about .job h3 {
+    font-size: 1.125rem; }
+  main#about .job h6 {
+    font-size: .8rem; }
+
+footer#main-footer {
+  height: 60px;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  text-align: center; }
 
 /*
     MODULES - Individual site components 
@@ -2468,10 +2479,9 @@ h4, h5, h6 {
     font-size: 4rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading,
   h4.sm-heading, h5.sm-heading, h6.sm-heading {
-    font-size: 2rem;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.2); }
+    background: rgba(76, 76, 76, 0.5); }
 
 a {
   color: #fff;
@@ -2479,6 +2489,69 @@ a {
 
 .text-secondary {
   color: #eece1a !important; }
+
+/* 
+    MOBILE - Screens media
+*/
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 3.2rem; }
+    main#about .about-info {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-areas: 'bioimage' 'bio' 'bio' 'job1'  'job2' 'job3';
+      grid-template-columns: repeat(1, 1fr); }
+    main#about .bio {
+      font-size: 1.1rem; }
+    main#about .job h3 {
+      font-size: 1rem; }
+    main#about .job h6 {
+      font-size: .8rem; } }
+
+@media screen and (max-width: 575.98px) {
+  header .menu-nav,
+  header .menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    header .menu-nav.show,
+    header .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  header .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    header .menu-branding .portrait {
+      width: 150px;
+      height: 150px; }
+  header .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0); }
+    header .menu-nav .nav-link {
+      font-size: 24px;
+      font-weight: 400; }
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 2.5rem; }
+    main#about .about-info {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-areas: 'bioimage' 'bio' 'bio' 'job1'  'job2' 'job3';
+      grid-template-columns: repeat(1, 1fr); }
+    main#about .bio {
+      font-size: 1.1rem; }
+    main#about .job h3 {
+      font-size: 1rem; }
+    main#about .job h6 {
+      font-size: .6875rem; } }
 
 /*
     Bootstrap Imports 

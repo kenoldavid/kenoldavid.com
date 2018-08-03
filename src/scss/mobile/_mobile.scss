@@ -22,7 +22,39 @@
         .lg-heading {
             line-height: 1;
             margin-bottom: 1rem;
-        }        
+            font-size: 3.2rem;
+        } 
+        
+        &#about {
+
+            .about-info {
+                display: grid;
+                grid-gap: 30px;
+                grid-template-areas: 
+                    'bioimage'
+                    'bio'
+                    'bio'
+                    'job1' 
+                    'job2'
+                    'job3';
+                grid-template-columns: repeat(1, 1fr);
+            }
+        
+            .bio {
+                font-size: 1.1rem;
+            }
+    
+            .job {
+                
+                h3 {                    
+                    font-size: 1rem;
+                }
+
+                h6 {                    
+                    font-size: .8rem;
+                }
+            }
+        } // end element ID 'about'
     } 
 }
 
@@ -71,13 +103,45 @@
     }
 
     main {
-        padding: 5.5rem .1rem !important;
+        // padding: 5.5rem .2rem !important;
         align-items: center;
         text-align: center;
 
         .lg-heading {
             line-height: 1;
             margin-bottom: 1rem;
+            font-size: 2.5rem;
         }        
+
+        &#about {
+
+            .about-info {
+                display: grid;
+                grid-gap: 30px;
+                grid-template-areas: 
+                    'bioimage'
+                    'bio'
+                    'bio'
+                    'job1' 
+                    'job2'
+                    'job3';
+                grid-template-columns: repeat(1, 1fr);
+            }
+        
+            .bio {
+                font-size: 1.1rem;
+            }
+    
+            .job {
+                
+                h3 {                    
+                    font-size: 1rem;
+                }
+
+                h6 {                    
+                    font-size: .6875rem;
+                }
+            }
+        } // end element ID 'about'
     } 
 }

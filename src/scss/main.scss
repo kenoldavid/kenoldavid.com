@@ -25,15 +25,12 @@
 */
 @import 'mixins/_mixins';
 
-/* 
-    MOBILE - Screens media
-*/
-@import 'mobile/_mobile';
 
 /* 
     BASE - Base styles 
 */
 @import 'base/_base';
+
 
 /*
     MODULES - Individual site components 
@@ -45,6 +42,10 @@
 @import 'modules/_components';
 
 
+/* 
+    MOBILE - Screens media
+*/
+@import 'mobile/_mobile';
 
 
 
