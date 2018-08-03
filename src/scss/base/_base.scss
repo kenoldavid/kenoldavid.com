@@ -1,7 +1,9 @@
+@import '../functions/functions';
+
 body {
     @include page-background-image();
     background-color: $body-color;
-    color: $white;
+    color: set-text-color($primary-color);
     height: 100vh;
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
