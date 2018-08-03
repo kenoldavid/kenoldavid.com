@@ -7,8 +7,8 @@ $show-home-image: true;
 // Images
 //
 $home-image: url(../../../dist/img/bg-5.jpg); // Use with Live Server
-// $home-image: url(file:///C:/Users/Ken/Sites/kenoldavid/dist/img/bg-5.jpg); // Use with filesystem
 $default-portrait-image: url(../../../dist/img/portrait.jpg); 
+// $home-image: url(file:///C:/Users/Ken/Sites/kenoldavid/dist/img/bg-5.jpg); // Use with filesystem
 
 $background-opacity: 0.4;
 
@@ -17,11 +17,11 @@ $background-opacity: 0.4;
 // Color system
 //
 
-$primary:       #444;
-$secondary:   #eece1a !important;
+$primary:   #444;
+$secondary: #eece1a !important;
 
-$primary-color: $primary;
-$secondary-color: $secondary;
+$primary-color:     $primary;
+$secondary-color:   $secondary;
 
 // Body
 //
