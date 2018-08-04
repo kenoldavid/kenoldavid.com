@@ -1,14 +1,40 @@
 // Widescreens
 @include mediaXL {
-    
+    header {
+
+    }
+
+    main {      
+
+        &#work {
+
+            .projects {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+        } // end element ID 'about'
+    } 
 }
 
 // Desktops and Laptops
 @include mediaLG {
+    header {
 
+    }
+
+    main {      
+
+        &#work {
+
+            .projects {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+        } // end element ID 'work'
+    } 
 }
 
-// Tables and Small Laptops
+// Tablets and Small Laptops
 @include mediaMD {
     
 }
@@ -55,6 +81,14 @@
                 }
             }
         } // end element ID 'about'
+
+        &#work {
+
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        } // end element ID 'work'
     } 
 }
 
@@ -69,7 +103,6 @@
             min-height: 0;
 
             &.show {
-                // 
                 transform: translate3d(0, 0, 0);
             }
         }
@@ -103,15 +136,23 @@
     }
 
     main {
-        // padding: 5.5rem .2rem !important;
+        padding: 2rem;
         align-items: center;
         text-align: center;
 
         .lg-heading {
             line-height: 1;
+            margin-top: 2rem;
             margin-bottom: 1rem;
             font-size: 2.5rem;
         }        
+
+        &#home {
+
+            h1 { 
+                margin-top: 15vh;
+            }
+        }
 
         &#about {
 
@@ -143,5 +184,18 @@
                 }
             }
         } // end element ID 'about'
+
+        
+        &#work {
+
+            .sm-heading {
+                font-size: 0.9375rem;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+        } // end element ID 'work'
     } 
 }
