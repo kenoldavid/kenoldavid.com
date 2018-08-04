@@ -2266,10 +2266,13 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important; }
 
 /* 
- *   VARIABLES -  
+    VARIABLES -  
  */
 /* 
     MIXINS -  
+*/
+/* 
+    FUNCTIONS -  
 */
 /* 
     BASE - Base styles 
@@ -2280,7 +2283,7 @@ body {
   height: 100vh;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
   body#bg-img {
-    background-image: url(../../../dist/img/bg-5.jpg);
+    background-image: url(../../../dist/img/bg-2.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -2298,6 +2301,10 @@ body {
 a {
   color: #fff;
   text-decoration: none; }
+  a:hover {
+    color: #eece1a;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
 
 header {
   position: fixed;
@@ -2308,43 +2315,40 @@ main {
   min-height: calc(100vh - 60px);
   padding: 4rem; }
 
-/* footer {
+footer#main-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 60px;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  text-align: center;
+  word-spacing: 1px; }
+  footer#main-footer small::first-letter {
+    text-transform: uppercase; }
+  footer#main-footer .fa-heart {
+    color: #dc3545; }
+  footer#main-footer a.text-secondary {
+    font-weight: 600;
+    color: #fff !important; }
+    footer#main-footer a.text-secondary:hover {
+      color: #eece1a !important; }
 
-} */
 /*
     LAYOUTS - layout styles 
 */
-.menu-btn {
-  position: absolute;
-  z-index: 3;
-  top: 35px;
-  right: 35px;
-  cursor: pointer;
-  transition: all 0.5s ease-out; }
-  .menu-btn .btn-line {
-    width: 28px;
-    height: 3px;
-    margin-bottom: 5px;
-    background: #fff;
-    transition: all 0.5s ease-out; }
-  .menu-btn.close {
-    transform: rotate(180deg); }
-    .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(10px, 6px); }
-    .menu-btn.close .btn-line:nth-child(2) {
-      opacity: 0; }
-    .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -1px); }
-
-.menu {
+nav.menu {
   position: fixed;
   top: 0;
   width: 100%;
   opacity: 0.9;
   visibility: hidden; }
-  .menu.show {
+  nav.menu.show {
     visibility: visible; }
-  .menu-branding, .menu-nav {
+  nav.menu .menu-branding,
+  nav.menu .menu-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -2353,22 +2357,48 @@ main {
     width: 50%;
     height: 100vh;
     overflow: hidden; }
-  .menu-nav {
+  nav.menu .menu-nav {
     margin: 0;
     padding: 0;
     background: #373737;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
-    .menu-nav.show {
+    nav.menu .menu-nav.show {
       transform: translate3d(0, 0, 0); }
-  .menu-branding {
+    nav.menu .menu-nav .nav-item {
+      transform: translate3d(600px, 0, 0);
+      transition: all 0.5s ease-out; }
+      nav.menu .menu-nav .nav-item.show {
+        transform: translate3d(0, 0, 0); }
+      nav.menu .menu-nav .nav-item.current > a {
+        color: #eece1a; }
+    nav.menu .menu-nav .nav-link {
+      display: inline-block;
+      position: relative;
+      padding: 1rem 0;
+      font-size: 30px;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.5s ease-out; }
+      nav.menu .menu-nav .nav-link:hover {
+        color: #eece1a; }
+    nav.menu .menu-nav .nav-item:nth-child(1) {
+      transition-delay: 0.1s; }
+    nav.menu .menu-nav .nav-item:nth-child(2) {
+      transition-delay: 0.2s; }
+    nav.menu .menu-nav .nav-item:nth-child(3) {
+      transition-delay: 0.3s; }
+    nav.menu .menu-nav .nav-item:nth-child(4) {
+      transition-delay: 0.4s; }
+  nav.menu .menu-branding {
     background: #444;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
-    .menu-branding.show {
+    nav.menu .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
+    nav.menu .menu-branding .portrait {
       width: 250px;
       height: 250px;
       background-image: url(../../../dist/img/portrait.jpg);
@@ -2377,53 +2407,33 @@ main {
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat; }
-  .menu .nav-item {
-    transform: translate3d(600px, 0, 0);
-    transition: all 0.5s ease-out; }
-    .menu .nav-item.show {
-      transform: translate3d(0, 0, 0); }
-    .menu .nav-item.current > a {
-      color: #eece1a; }
-  .menu .nav-link {
-    display: inline-block;
-    position: relative;
-    padding: 1rem 0;
-    font-size: 30px;
-    font-weight: 400;
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.5s ease-out; }
-    .menu .nav-link:hover {
-      color: #eece1a; }
-
-.nav-item:nth-child(1) {
-  transition-delay: 0.1s; }
-
-.nav-item:nth-child(2) {
-  transition-delay: 0.2s; }
-
-.nav-item:nth-child(3) {
-  transition-delay: 0.3s; }
-
-.nav-item:nth-child(4) {
-  transition-delay: 0.4s; }
 
 /*
     PAGES - Indiviual page styles 
 */
-main .icons {
-  margin-top: 1rem; }
-  main .icons a {
-    padding: 0.4rem; }
-    main .icons a:hover {
-      color: #eece1a;
-      text-decoration: none;
-      transition: all 0.5s ease-out; }
-
 main#home {
   overflow: hidden; }
   main#home h1 {
     margin-top: 20vh; }
+  main#home .icons {
+    margin-top: 1rem; }
+    main#home .icons a {
+      padding: 0.4rem;
+      /* svg:hover path {
+                    fill: red;
+                } */ }
+      main#home .icons a:hover {
+        color: #eece1a;
+        text-decoration: none;
+        transition: all 0.5s ease-out; }
+      main#home .icons a svg {
+        width: 38px;
+        height: 38px; }
+        main#home .icons a svg path {
+          fill: #ffffff; }
+          main#home .icons a svg path:hover {
+            fill: #eece1a;
+            transition: all 0.5s ease-out; }
 
 main#about .about-info {
   display: grid;
@@ -2464,13 +2474,6 @@ main#about .job {
   main#about .job h6 {
     font-size: .8rem; }
 
-footer#main-footer {
-  height: 60px;
-  padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
-  text-align: center; }
-
 main#work .projects {
   display: grid;
   grid-gap: 20px;
@@ -2502,7 +2505,7 @@ main#contact .boxes {
         color: #000 !important; }
 
 /*
-    MODULES - Individual site components 
+MODULES - Individual site components 
 */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -2545,6 +2548,28 @@ a {
   background: #c4c4c4;
   color: #333; }
 
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 6px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -1px); }
+
 /* 
     MOBILE - Screens media
 */
@@ -2579,24 +2604,24 @@ a {
       grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 575.98px) {
-  header .menu-nav,
-  header .menu-branding {
+  header nav.menu .menu-nav,
+  header nav.menu .menu-branding {
     float: none;
     width: 100%;
     min-height: 0; }
-    header .menu-nav.show,
-    header .menu-branding.show {
+    header nav.menu .menu-nav.show,
+    header nav.menu .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-  header .menu-branding {
+  header nav.menu .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
-    header .menu-branding .portrait {
+    header nav.menu .menu-branding .portrait {
       width: 150px;
       height: 150px; }
-  header .menu-nav {
+  header nav.menu .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0); }
-    header .menu-nav .nav-link {
+    header nav.menu .menu-nav .nav-link {
       font-size: 24px;
       font-weight: 400; }
   main {

@@ -56,16 +56,3 @@ main {
         }
     } // end element ID 'about'
 } // end main (about page)
-
-footer {
-    
-    &#main-footer {
-
-        height: 60px;
-        padding: 1rem;
-        background: darken($primary-color, 10);
-        color: set-text-color($primary-color);
-        text-align: center;
-
-    }
-} // end footer (about page)

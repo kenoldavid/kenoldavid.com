@@ -12,6 +12,12 @@ body {
 a {
     color: $link-color;
     text-decoration: $link-hover-decoration;
+
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        @include easeOut();
+    }
   }
 
 header {
@@ -25,15 +31,48 @@ main {
     padding: 4rem;
 }
 
-/* footer {
+footer {
+    
+    &#main-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
 
-} */
+        min-height: 60px;
+        padding: 1rem;
+        background: darken($primary-color, 10);
+        color: set-text-color($primary-color);
+        text-align: center;
+        
+        // letter-spacing: 2px;
+        word-spacing: 1px;
+
+        small::first-letter {
+            text-transform: uppercase;
+        }
+
+        .fa-heart {
+            color: $red;
+        }
+
+        a {
+            &.text-secondary {
+                font-weight: 600;
+                color: set-text-color($primary-color) !important;
+
+                &:hover {
+                    color: $secondary-color !important;
+                }
+            }
+        }
+    }
+} // end footer (about page)
 
 /*
     LAYOUTS - layout styles 
 */
-@import '../layout/_menu';
-
+@import '../layout/_nav';
 
 
 /*

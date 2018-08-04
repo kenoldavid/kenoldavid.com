@@ -16,7 +16,7 @@
 
 
 /* 
- *   VARIABLES -  
+    VARIABLES -  
  */
 @import 'variables/_variables';
 
@@ -25,7 +25,9 @@
 */
 @import 'mixins/_mixins';
 
-
+/* 
+    FUNCTIONS -  
+*/
 @import 'functions/functions';
 
 /* 
@@ -35,19 +37,45 @@
 
 
 /*
-    MODULES - Individual site components 
+MODULES - Individual site components 
 */
 @import 'modules/_typography';
-@import 'modules/_blocks';
 @import 'modules/_buttons';
-@import 'modules/_sections';
-@import 'modules/_components';
 
 
 /* 
     MOBILE - Screens media
 */
 @import 'mobile/_mobile';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
