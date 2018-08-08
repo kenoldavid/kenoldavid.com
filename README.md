@@ -1,3 +1,3 @@
 # kenoldavid.com
 
-A prject using HTML5, CSS3, Sass and Bootstrap 4.
+A project using HTML5, CSS3, Sass and Bootstrap 4.
