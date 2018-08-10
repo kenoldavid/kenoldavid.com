@@ -2283,7 +2283,7 @@ body {
   height: 100vh;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
   body#bg-img {
-    background-image: url(../../../dist/img/bg-2.jpg);
+    background-image: url(../img/backgrounds/bg-2.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -2401,7 +2401,7 @@ nav.menu {
     nav.menu .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background-image: url(../../../dist/img/portrait.jpg);
+      background-image: url(../img/portraits/portrait-4.jpg);
       border-radius: 50%;
       border: solid 3px #eece1a;
       background-size: cover;
@@ -2443,11 +2443,16 @@ main#about .about-info {
 
 main#about .bio-image {
   grid-area: bioimage;
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   margin: auto;
   border-radius: 50%;
-  border: solid 3px #eece1a; }
+  border: solid 3px #eece1a;
+  /* background-color: $white;
+            background-image: url(../img/portraits/portrait-4.jpg);                         
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center; */ }
 
 main#about .bio {
   grid-area: bio;
