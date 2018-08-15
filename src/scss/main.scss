@@ -5,6 +5,7 @@
     Version: 0.0.1
 */
 
+//! Framework Sass Files
 /*
     Bootstrap Imports 
 */
@@ -16,7 +17,16 @@
 
 
 /* 
-    VARIABLES -  
+    Font Awesome Imports
+*/
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+
+
+//! Custom Sass Files
+/* 
+    VARIABLES - sets and overrides variables  
  */
 @import 'variables/_variables';
 
