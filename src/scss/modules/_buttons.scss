@@ -1,5 +1,5 @@
 // Button Styles
-.btn {
+.mybtn {
     display: block;
     padding: 0.5rem 1rem;
     border: 0;
@@ -14,13 +14,13 @@
 }
 
 .btn-dark {
-    @extend .btn;
+    @extend .mybtn;
     background: darken($primary-color, 50);
     color: $white;
 }
 
 .btn-light {
-    @extend .btn;
+    @extend .mybtn;
     background: lighten($primary-color, 50);
     color: #333;
 }

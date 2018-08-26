@@ -1,63 +1,126 @@
-// MAIN section for the about page
+//! MAIN section for the about page
+//!
+//! Using CSS Grid
+
 main {
 
     &#about {
 
+        padding-bottom: 0;
+
         .about-info {
             display: grid;
-            grid-gap: 30px;
             grid-template-areas: 
-                'bioimage bio bio'
-                'job1 job2 job3';
+            'img  bio  bio'
+            'link bio  bio'
+            'link bio  bio'
+            'hdr  hdr  hdr'
+            'job1 job2 job3'
+            'site site site ';
             grid-template-columns: repeat(3, 1fr);
-        }
+            grid-column-gap: 20px; 
+            grid-row-gap: 30px;                                
+
+            // gap: 30px;
+            // grid-gap: 10px;    
+
+            // border: 2px solid $red;
+            // background-color: $white;
+
+            .bio-img {
+                grid-area: img;
+                width: 100%;
+
+                display: flex;      
+                flex-direction: column;              
+                justify-content: center;
+                align-items: center;
+
+                // background-color: $body-color;
+                // background-color: $blue;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    opacity: 1;
+                    border-radius: 50%;                                        
+                    border: solid 0px $secondary-color;
+                }
+               
+            } //! end .bio-img
+
+            .bio {
+                grid-area: bio;
+                // background-color: saddlebrown;
+            } //! end .bio
+
+            .link {
+                grid-area: link;  
+
+                display: flex;
+                flex-direction: column;
+                // justify-content: flex-end;
+                justify-content: space-evenly;
+                align-items: center;
+
+                // background-color: pink;
+                // background-color: $body-color;
+                
+                a {
+                    // margin-top: 1rem;
+                }
+            } //! end .link
+
+            .section-title {
+                grid-area: hdr;                                         
+                // background-color: darkgreen;
+            } //! end .highlights
+
+            .job {
+                padding: 0.5rem;
+                background: lighten($primary-color, 5);
+                border-bottom: solid 5px $secondary-color;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+               
+                h2, h4 {
+                    padding-bottom: 15px;
+                    text-transform: capitalize;
+                }
+            }
+
+            .job-1 {
+                grid-area: job1;
+                margin-top: -33px;
+            }
     
-        .bio-image {
-            grid-area: bioimage;
-            width: 220px;
-            height: 220px;
-            margin: auto;
-            border-radius: 50%;
-            border: solid 3px $secondary-color;
-            /* background-color: $white;
-            background-image: url(../img/portraits/portrait-4.jpg);                         
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center; */
-        }
-        .bio {
-            grid-area: bio;
-            font-size: 1.5rem;
-        }
-        .job-1 {
-            grid-area: job1;
-        }
-        .job-2 {
-            grid-area: job2;
-        }
-        .job-3 {
-            grid-area: job3;
-        }
-
-        .job {
-            background: lighten($primary-color, 5);
-            padding: 0.5rem;
-            border-bottom: solid 5px $secondary-color;
-            
-            h3, h6 {
-                padding-bottom: 15px;
-                text-transform: capitalize;
+            .job-2 {
+                grid-area: job2;
+                margin-top: -30px;
             }
+    
+            .job-3 {
+                grid-area: job3;
+                margin-top: -30px;
+            } //! end .job, .job-1, .job-2, .job-3
 
-            h3 {
-                font-size: 1.125rem;
-                // font-weight: 600;
-            }
+            .about-the-site {
+                grid-area: site;
+                // margin-top: 50px;
+                width: 60%;
+                padding: 20px 50px;
 
-            h6 {
-                font-size: .8rem;
-                // font-weight: 600;
-            }
-        }
+                justify-self: center;
+                align-items: center;
+
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+
+                background: rgba(lighten($primary-color, 3), 0.5);
+            } //! end .about-the-site
+
+        } //! end .about-info
     } // end element ID 'about'
 } // end main (about page)

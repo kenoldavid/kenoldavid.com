@@ -41,7 +41,8 @@
 
 // Smartphones
 @include mediaSM {
-    main {
+
+     main {
         align-items: center;
         text-align: center;
 
@@ -89,7 +90,7 @@
             }
 
         } // end element ID 'work'
-    } 
+    }  
 }
 
 // Smartphones
@@ -142,7 +143,7 @@
     }
 
     main {
-        padding: 2rem;
+        padding: 0.75rem;
         align-items: center;
         text-align: center;
 
@@ -162,34 +163,85 @@
 
         &#about {
 
+            .lg-heading {
+                // border: 1px solid $white;
+                margin-top: 0.8rem;
+                // margin-right: 4rem;
+                text-align: left;
+                // text-transform: uppercase !important;
+
+                [id="full-name"] {
+                    display: block;
+                    // text-transform: uppercase !important;
+                }
+            }
+
+            .sm-heading {
+                // text-align: left;
+            }
+
             .about-info {
-                display: grid;
-                grid-gap: 30px;
+                grid-row-gap: 30px;
                 grid-template-areas: 
-                    'bioimage'
+                    'img'
                     'bio'
                     'bio'
+                    'link'
+                    'link'
+                    'hdr'
                     'job1' 
                     'job2'
-                    'job3';
+                    'job3'
+                    'site';
                 grid-template-columns: repeat(1, 1fr);
-            }
-        
-            .bio {
-                font-size: 1.1rem;
-            }
-    
-            .job {
-                
-                h3 {                    
-                    font-size: 1rem;
-                }
+            }                
 
-                h6 {                    
-                    font-size: .6875rem;
-                }
+            .bio {
+                
+            } //! end .bio
+
+            .link {                
+                justify-content: center;
+
+                a {
+                    &:nth-child(1) {
+                        margin-top: 1rem;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    &:nth-child(2) {
+                        margin-top: 0.5rem;
+                        margin-bottom: 1rem;
+                    }
+                } 
+            } //! end .link
+
+            .section-title {
+                // margin-top: 0 !important;
+            } //! end .highlights
+
+            .job {
+                margin-bottom: 30px;      
+                border-radius: 10px;                          
             }
-        } // end element ID 'about'
+
+            .job-1 {
+                margin-top: -20px !important;
+            }
+
+            .about-the-site {
+                width: 97% !important;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 10px !important;
+                padding-left: 10px !important;
+                
+                p, ul {
+                    text-align: left;
+                }
+            } //! end .about-the-site
+            
+        } //! end element ID 'about'
 
         
         &#work {
