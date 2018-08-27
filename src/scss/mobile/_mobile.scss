@@ -1,4 +1,4 @@
-// Widescreens
+//TODO - Widescreens (extra large desktops, 1200px and up)
 @include mediaXL {
     header {
 
@@ -16,7 +16,7 @@
     } 
 }
 
-// Desktops and Laptops
+//TODO - Desktops and Laptops (desktops, 992px and up)
 @include mediaLG {
     header {
 
@@ -34,15 +34,18 @@
     } 
 }
 
-// Tablets and Small Laptops
+//TODO - Tablets and Small Laptops (tablets, 768px and up)
 @include mediaMD {
     
 }
 
-// Smartphones
+//! SM Smartphones (max-width: 767.98px)
 @include mediaSM {
 
-     main {
+     main {  
+        // height: calc(98vh - 60px) !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
         align-items: center;
         text-align: center;
 
@@ -52,48 +55,102 @@
             font-size: 3.2rem;
         } 
         
+        &#home {
+            h1 { 
+                margin-top: 18vh;
+            }
+        }
+
         &#about {
 
+            .lg-heading {
+                // border: 1px solid $white;
+                margin-top: 0.8rem;
+                // margin-right: 4rem;
+                text-align: left;
+                // text-transform: uppercase !important;
+
+                [id="full-name"] {
+                    display: inline;
+                    // text-transform: uppercase !important;
+                }
+            }
+
+            .sm-heading {
+                text-align: left;
+            }
+
             .about-info {
-                display: grid;
-                grid-gap: 30px;
+                grid-row-gap: 30px;
                 grid-template-areas: 
-                    'bioimage'
+                    'img'
                     'bio'
                     'bio'
+                    'link'
+                    'link'
+                    'hdr'
                     'job1' 
                     'job2'
-                    'job3';
+                    'job3'
+                    'site';
                 grid-template-columns: repeat(1, 1fr);
-            }
-        
+            }                
+
             .bio {
-                font-size: 1.1rem;
-            }
-    
-            .job {
                 
-                h3 {                    
-                    font-size: 1rem;
-                }
+            } //! end .bio
 
-                h6 {                    
-                    font-size: .8rem;
-                }
+            .link {                
+                justify-content: center;
+
+                a {
+                    &:nth-child(1) {
+                        margin-top: 1rem;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    &:nth-child(2) {
+                        margin-top: 0.5rem;
+                        margin-bottom: 1rem;
+                    }
+                } 
+            } //! end .link
+
+            .section-title {
+                // margin-top: 0 !important;
+            } //! end .highlights
+
+            .job {
+                margin-bottom: 30px;      
+                border-radius: 10px;                          
             }
-        } // end element ID 'about'
 
-        &#work {
+            .job-1 {
+                margin-top: -20px !important;
+            }
 
-            .projects {
+            .about-the-site {
+                width: 118% !important;                 
+                
+                p, ul {
+                    text-align: left;
+                }
+            } //! end .about-the-site
+            
+        } //! end element ID 'about'
+
+        &#projects {
+
+            .my-projects {
                 grid-template-columns: repeat(2, 1fr);
+                // grid-row-gap: 100px;
             }
 
         } // end element ID 'work'
     }  
 }
 
-// Smartphones
+//! XS Smartphones (max-width: 575.98px)
 @include mediaXS {
 
     header {
@@ -143,7 +200,11 @@
     }
 
     main {
-        padding: 0.75rem;
+        min-height: calc(98.5vh - 60px) !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
         align-items: center;
         text-align: center;
 
@@ -155,9 +216,23 @@
         }        
 
         &#home {
-
             h1 { 
-                margin-top: 15vh;
+                margin-top: 28vh;
+            }
+            .sm-heading {
+                margin-bottom: 0.1rem !important;
+                font-size: 1.25rem;
+            }
+            .icons {
+                margin-bottom: 0.1rem !important;
+                a {
+                    font-size: 12px;
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
             }
         }
 
@@ -244,16 +319,29 @@
         } //! end element ID 'about'
 
         
-        &#work {
+        &#projects {
 
             .sm-heading {
                 font-size: 0.9375rem;
             }
 
-            .projects {
+            .my-projects {
                 grid-template-columns: 1fr;
             }
 
         } // end element ID 'work'
     } 
+}
+
+//! XSS Smartphones (max-width: 320px)
+@include mediaXXS {
+    main {
+        min-height: calc(94.98vh - 60px) !important;
+
+        &#home {
+            h1 { 
+                margin-top: 25vh;
+            }
+        }
+    }
 }

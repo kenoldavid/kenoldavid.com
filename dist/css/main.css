@@ -6715,27 +6715,48 @@ a {
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
   main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 3.2rem; }
+    main#home h1 {
+      margin-top: 18vh; }
+    main#about .lg-heading {
+      margin-top: 0.8rem;
+      text-align: left; }
+      main#about .lg-heading [id="full-name"] {
+        display: inline; }
+    main#about .sm-heading {
+      text-align: left; }
     main#about .about-info {
-      display: grid;
-      grid-gap: 30px;
-      grid-template-areas: 'bioimage' 'bio' 'bio' 'job1'  'job2' 'job3';
+      grid-row-gap: 30px;
+      grid-template-areas: 'img' 'bio' 'bio' 'link' 'link' 'hdr' 'job1'  'job2' 'job3' 'site';
       grid-template-columns: repeat(1, 1fr); }
-    main#about .bio {
-      font-size: 1.1rem; }
-    main#about .job h3 {
-      font-size: 1rem; }
-    main#about .job h6 {
-      font-size: .8rem; }
-    main#work .projects {
+    main#about .link {
+      justify-content: center; }
+      main#about .link a:nth-child(1) {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem; }
+      main#about .link a:nth-child(2) {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem; }
+    main#about .job {
+      margin-bottom: 30px;
+      border-radius: 10px; }
+    main#about .job-1 {
+      margin-top: -20px !important; }
+    main#about .about-the-site {
+      width: 118% !important; }
+      main#about .about-the-site p, main#about .about-the-site ul {
+        text-align: left; }
+    main#projects .my-projects {
       grid-template-columns: repeat(2, 1fr); } }
 
-@media screen and (max-width: 575.98px) {
+@media screen and (min-width: 320.01px) and (max-width: 575.98px) {
   header nav.menu .menu-nav,
   header nav.menu .menu-branding {
     float: none;
@@ -6757,7 +6778,11 @@ a {
       font-size: 24px;
       font-weight: 400; }
   main {
-    padding: 0.75rem;
+    min-height: calc(98.5vh - 60px) !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
     align-items: center;
     text-align: center; }
     main .lg-heading {
@@ -6766,7 +6791,17 @@ a {
       margin-bottom: 1rem;
       font-size: 2.5rem; }
     main#home h1 {
-      margin-top: 15vh; }
+      margin-top: 28vh; }
+    main#home .sm-heading {
+      margin-bottom: 0.1rem !important;
+      font-size: 1.25rem; }
+    main#home .icons {
+      margin-bottom: 0.1rem !important; }
+      main#home .icons a {
+        font-size: 12px; }
+        main#home .icons a svg {
+          width: 30px;
+          height: 30px; }
     main#about .lg-heading {
       margin-top: 0.8rem;
       text-align: left; }
@@ -6797,10 +6832,16 @@ a {
       padding-left: 10px !important; }
       main#about .about-the-site p, main#about .about-the-site ul {
         text-align: left; }
-    main#work .sm-heading {
+    main#projects .sm-heading {
       font-size: 0.9375rem; }
-    main#work .projects {
+    main#projects .my-projects {
       grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 320px) {
+  main {
+    min-height: calc(94.98vh - 60px) !important; }
+    main#home h1 {
+      margin-top: 25vh; } }
 
 /*
     Bootstrap Imports 
