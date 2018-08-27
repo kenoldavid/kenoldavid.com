@@ -6725,8 +6725,12 @@ a {
       font-size: 3.2rem; }
     main#home h1 {
       margin-top: 18vh; }
+    main#home .sm-heading {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem; }
     main#about .lg-heading {
-      margin-top: 0.8rem;
+      border: 0px solid #fff;
+      padding-top: 1.3rem;
       text-align: left; }
       main#about .lg-heading [id="full-name"] {
         display: inline; }
@@ -6836,6 +6840,17 @@ a {
       font-size: 0.9375rem; }
     main#projects .my-projects {
       grid-template-columns: 1fr; } }
+
+@media screen and (max-height: 320px) {
+  main {
+    min-height: calc(100vh - 60px) !important; }
+    main#home h1 {
+      margin-top: 20vh !important; }
+    main#about .lg-heading {
+      border: 0px solid yellow;
+      padding-top: 1.3rem; }
+      main#about .lg-heading [id="full-name"] {
+        display: inline !important; } }
 
 @media screen and (max-width: 320px) {
   main {

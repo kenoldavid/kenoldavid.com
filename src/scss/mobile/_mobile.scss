@@ -59,14 +59,18 @@
             h1 { 
                 margin-top: 18vh;
             }
+            .sm-heading {
+                margin-bottom: 1.5rem;
+                // padding: 0.2rem 1rem; 
+                font-size: 1.25rem;
+            }
         }
 
         &#about {
 
             .lg-heading {
-                // border: 1px solid $white;
-                margin-top: 0.8rem;
-                // margin-right: 4rem;
+                border: 0px solid $white;
+                padding-top: 1.3rem;
                 text-align: left;
                 // text-transform: uppercase !important;
 
@@ -96,10 +100,6 @@
                 grid-template-columns: repeat(1, 1fr);
             }                
 
-            .bio {
-                
-            } //! end .bio
-
             .link {                
                 justify-content: center;
 
@@ -115,10 +115,6 @@
                     }
                 } 
             } //! end .link
-
-            .section-title {
-                // margin-top: 0 !important;
-            } //! end .highlights
 
             .job {
                 margin-bottom: 30px;      
@@ -225,6 +221,7 @@
             }
             .icons {
                 margin-bottom: 0.1rem !important;
+
                 a {
                     font-size: 12px;
 
@@ -251,10 +248,6 @@
                 }
             }
 
-            .sm-heading {
-                // text-align: left;
-            }
-
             .about-info {
                 grid-row-gap: 30px;
                 grid-template-areas: 
@@ -271,10 +264,6 @@
                 grid-template-columns: repeat(1, 1fr);
             }                
 
-            .bio {
-                
-            } //! end .bio
-
             .link {                
                 justify-content: center;
 
@@ -290,10 +279,6 @@
                     }
                 } 
             } //! end .link
-
-            .section-title {
-                // margin-top: 0 !important;
-            } //! end .highlights
 
             .job {
                 margin-bottom: 30px;      
@@ -331,6 +316,32 @@
 
         } // end element ID 'work'
     } 
+}
+
+//! XSS Smartphones (max-height: 320px)
+//!
+//! Landscape mode
+@include mediaXXSLandscape {
+    main {
+        min-height: calc(100vh - 60px) !important;
+
+        &#home {
+            h1 { 
+                margin-top: 20vh !important;
+            }
+        }
+
+        &#about {
+            .lg-heading {
+                border: 0px solid yellow;
+                padding-top: 1.3rem;
+
+                [id="full-name"] {
+                    display: inline !important;                
+                }
+            }
+        }
+    }
 }
 
 //! XSS Smartphones (max-width: 320px)
