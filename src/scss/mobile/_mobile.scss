@@ -196,7 +196,7 @@
     }
 
     main {
-        min-height: calc(98.5vh - 60px) !important;
+        // min-height: calc(98.vh - 60px) !important;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
         padding-right: 0.75rem;
@@ -347,7 +347,7 @@
 //! XSS Smartphones (max-width: 320px)
 @include mediaXXS {
     main {
-        min-height: calc(94.98vh - 60px) !important;
+        // min-height: calc(94.98vh - 60px) !important;
 
         &#home {
             h1 { 
