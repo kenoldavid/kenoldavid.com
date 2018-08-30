@@ -6964,33 +6964,7 @@ main#projects .my-projects {
       transition: all 0.5s ease-out; }
 
 main#contact {
-  padding-bottom: 0;
-  /*    -----------     
-        .boxes {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-            margin-top: 1rem;
-
-            div {
-                border: 3px solid $white;
-                margin-bottom: 3rem;
-                padding: 1.5rem 2.5rem;
-                font-size: 2rem;
-                @include easeOut;
-
-                &:hover {
-                    background: $secondary-color;
-                    color: set-text-color($secondary-color);
-
-                    span {
-                        color: set-text-color($secondary-color) !important;
-                    }
-                }
-            }
-        } 
-        */ }
+  padding-bottom: 0; }
   main#contact .sm-heading {
     margin-bottom: 20px !important; }
   main#contact .contact-info {
@@ -7031,41 +7005,43 @@ main#contact {
       grid-area: ca; }
       main#contact .contact-info .container .cashapp {
         display: grid;
-        grid-template-columns: 100px 350px;
+        grid-template-columns: 100px 375px;
         grid-template-rows: 100px 30px;
         grid-gap: 5px 5px;
         padding: 8px;
         border: 1px solid green;
         border-radius: 10px; }
-        main#contact .contact-info .container .cashapp img {
-          width: 100px;
-          height: 100px;
-          opacity: .5; }
-          main#contact .contact-info .container .cashapp img:hover {
-            opacity: 1;
-            transition: all 0.5s ease-out; }
         main#contact .contact-info .container .cashapp .items {
           margin-bottom: 0.625rem; }
           main#contact .contact-info .container .cashapp .items .title {
             font-weight: 500; }
           main#contact .contact-info .container .cashapp .items .subtitle {
             font-size: .9345rem; }
-        main#contact .contact-info .container .cashapp a {
+        main#contact .contact-info .container .cashapp a img {
+          width: 100px;
+          height: 100px;
+          opacity: .5; }
+          main#contact .contact-info .container .cashapp a img:hover {
+            opacity: 1;
+            transition: all 0.5s ease-out; }
+        main#contact .contact-info .container .cashapp a.link {
           align-self: start;
           justify-self: center;
+          margin-left: 4px;
           font-size: 0.875rem;
           transition: all 0.5s ease-out;
           display: inline-flex; }
-          main#contact .contact-info .container .cashapp a .fas {
+          main#contact .contact-info .container .cashapp a.link .fas {
             position: relative;
             top: 0;
             right: -3px; }
 
-footer {
-  margin-top: 0 !important; }
-  footer#main-footer {
-    padding: 0 !important; }
-
+/* footer {
+    margin-top: 0 !important;
+    &#main-footer {
+        padding: 0 !important;
+    }
+} */
 /*
 MODULES - Individual site components 
 */
@@ -7148,6 +7124,8 @@ a {
   main {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    /* padding-right: 2rem !important;
+        padding-left: 2rem !important; */
     align-items: center;
     text-align: center; }
     main .lg-heading {
@@ -7189,7 +7167,63 @@ a {
       main#about .about-the-site p, main#about .about-the-site ul {
         text-align: left; }
     main#projects .my-projects {
-      grid-template-columns: repeat(2, 1fr); } }
+      grid-template-columns: repeat(2, 1fr); }
+    main#contact .lg-heading {
+      margin-top: 0.8rem;
+      text-align: left; }
+      main#contact .lg-heading [id="get-in-touch"] {
+        display: block; }
+    main#contact .contact-info {
+      margin: 2rem 0 !important;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 30px;
+      grid-template-areas: 'text' 'form' 'form' 'form' 'form' 'ca'; }
+      main#contact .contact-info form {
+        margin-right: 40px;
+        margin-left: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 'fullname'  'email' 'sub' 'msg' 'btn'; }
+      main#contact .contact-info .container {
+        margin-right: 40px;
+        margin-left: 40px; }
+        main#contact .contact-info .container .cashapp {
+          /* 
+                            *  We first create a flex layout context 
+                            */
+          display: flex;
+          /* 
+                            *  Then we define the flow direction
+                            *  and if we allow the items to wrap 
+                            */
+          flex-direction: column;
+          flex-wrap: nowrap;
+          /* 
+                            *  Then we define how the flex items
+                            *  are laid out along the cross axis
+                            *  on the current line
+                            */
+          align-items: center; }
+          main#contact .contact-info .container .cashapp img {
+            order: 3; }
+          main#contact .contact-info .container .cashapp .items {
+            height: 82px;
+            margin-top: 0.625rem;
+            /* .title {
+                                background-color: blue;
+                            } */ }
+            main#contact .contact-info .container .cashapp .items .subtitle {
+              padding-top: 10px;
+              padding-bottom: 0; }
+          main#contact .contact-info .container .cashapp a {
+            order: 4; }
+            main#contact .contact-info .container .cashapp a.link {
+              align-self: center;
+              margin: 0.625rem;
+              font-weight: 500; }
+              main#contact .contact-info .container .cashapp a.link:hover {
+                background-color: #fff;
+                padding: 4px; } }
 
 @media screen and (min-width: 320.01px) and (max-width: 575.98px) {
   header nav.menu .menu-nav,
@@ -7215,8 +7249,8 @@ a {
   main {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     align-items: center;
     text-align: center; }
     main .lg-heading {
@@ -7286,51 +7320,70 @@ a {
         grid-template-areas: 'fullname'  'email' 'sub' 'msg' 'btn'; }
       main#contact .contact-info .container .cashapp {
         /* 
-                             *  We first create a flex layout context 
-                             */
+                            *  We first create a flex layout context 
+                            */
         display: flex;
         /* 
-                             *  Then we define the flow direction
-                             *  and if we allow the items to wrap 
-                             */
+                            *  Then we define the flow direction
+                            *  and if we allow the items to wrap 
+                            */
         flex-direction: column;
         flex-wrap: nowrap;
         /* 
-                             *  Then we define how the flex items
-                             *  are laid out along the cross axis
-                             *  on the current line
-                             */
+                            *  Then we define how the flex items
+                            *  are laid out along the cross axis
+                            *  on the current line
+                            */
         align-items: center; }
-        main#contact .contact-info .container .cashapp img {
-          order: 3; }
         main#contact .contact-info .container .cashapp .items {
           height: 130px;
           margin-top: 0.625rem;
           /* .title {
-                                    background-color: blue;
-                                } */ }
+                                background-color: blue;
+                            } */ }
           main#contact .contact-info .container .cashapp .items .subtitle {
             padding-top: 10px;
             padding-bottom: 0; }
         main#contact .contact-info .container .cashapp a {
-          align-self: center;
-          order: 4;
-          margin: 0.625rem;
-          font-weight: 500; }
-          main#contact .contact-info .container .cashapp a:hover {
-            background-color: #fff;
-            padding: 4px; } }
+          order: 4; }
+          main#contact .contact-info .container .cashapp a img {
+            order: 3; }
+          main#contact .contact-info .container .cashapp a.link {
+            align-self: center;
+            margin: 0.625rem;
+            font-weight: 500; }
+            main#contact .contact-info .container .cashapp a.link:hover {
+              background-color: #fff;
+              padding: 4px; } }
 
 @media screen and (max-height: 320px) {
   main {
-    min-height: calc(100vh - 60px) !important; }
+    min-height: calc(100vh - 60px) !important;
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important; }
     main#home h1 {
       margin-top: 20vh !important; }
     main#about .lg-heading {
-      border: 0px solid yellow;
       padding-top: 1.3rem; }
       main#about .lg-heading [id="full-name"] {
-        display: inline !important; } }
+        display: inline !important; }
+    main#contact .lg-heading {
+      padding-top: 1.3rem; }
+      main#contact .lg-heading [id="get-in-touch"] {
+        display: inline !important; }
+    main#contact .sm-heading {
+      padding: 0.2rem 2rem; }
+    main#contact .contact-info .contact-intro {
+      margin-right: 40px;
+      margin-left: 40px; }
+    main#contact .contact-info form {
+      margin-right: 40px;
+      margin-left: 40px; }
+    main#contact .contact-info .container {
+      margin-right: 40px;
+      margin-left: 40px; }
+      main#contact .contact-info .container .cashapp .items {
+        height: 82px; } }
 
 @media screen and (max-width: 320px) {
   main#home h1 {

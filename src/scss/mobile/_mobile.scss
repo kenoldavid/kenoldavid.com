@@ -46,6 +46,8 @@
         // height: calc(98vh - 60px) !important;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        /* padding-right: 2rem !important;
+        padding-left: 2rem !important; */
         align-items: center;
         text-align: center;
 
@@ -142,9 +144,112 @@
                 // grid-row-gap: 100px;
             }
 
-        } // end element ID 'work'
-    }  
-}
+        } // end element ID 'projects'
+
+        &#contact {
+            .lg-heading {
+                // border: 1px solid $white;
+                margin-top: 0.8rem;
+                text-align: left;
+
+                [id="get-in-touch"] {
+                    display: block;
+                }
+            }
+
+            .contact-info {
+                margin: 2rem 0 !important;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-row-gap: 30px;
+                grid-template-areas: 
+                    'text'
+                    'form'
+                    'form'
+                    'form'
+                    'form'
+                    'ca';
+
+                form {
+                    margin-right: 40px;
+                    margin-left: 40px; 
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-areas: 
+                    'fullname' 
+                    'email'
+                    'sub'
+                    'msg'
+                    'btn';  
+                }
+
+                .container {  
+                    margin-right: 40px;
+                    margin-left: 40px;                      
+
+                    .cashapp {
+                        /* 
+                            *  We first create a flex layout context 
+                            */
+                        display: flex;
+
+                        /* 
+                            *  Then we define the flow direction
+                            *  and if we allow the items to wrap 
+                            */
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        
+                        /* 
+                            *  Then we define how the flex items
+                            *  are laid out along the cross axis
+                            *  on the current line
+                            */
+                        align-items: center;
+
+                        // background-color: white;
+
+                        img {
+                            order: 3;
+                            // border: 1px solid red;
+                        } 
+
+                        .items {
+                            height: 82px;
+                            margin-top: 0.625rem;
+                            // background-color: #666;
+                            // border: 1px solid red;
+
+                            /* .title {
+                                background-color: blue;
+                            } */
+                            
+                            .subtitle {
+                                padding-top: 10px;
+                                padding-bottom: 0;
+                                // background-color: $primary-color;
+                            }
+                        }
+                        a {
+                            order: 4;
+                            &.link {
+                                align-self: center;
+                                margin: 0.625rem;
+                                font-weight: 500;
+                                // background-color: brown;
+
+                                &:hover {
+                                    background-color: $white;
+                                    padding: 4px;
+                                }
+                            }                            
+                        }
+                    }
+                }                                        
+            } // end flex container
+        } // end element ID 'contact'
+    } //! end main
+} //! end mediaSM
+
 
 //! XS Smartphones (max-width: 575.98px)
 @include mediaXS {
@@ -199,8 +304,8 @@
         // min-height: calc(98.vh - 60px) !important;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
-        padding-right: 0.75rem;
-        padding-left: 0.75rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
         align-items: center;
         text-align: center;
 
@@ -231,7 +336,7 @@
                     }
                 }
             }
-        }
+        } // end element ID 'home'
 
         &#about {
 
@@ -339,64 +444,65 @@
                     'form'
                     'ca';
 
-                    form {
-                        grid-template-columns: repeat(1, 1fr);
-                        grid-template-areas: 
-                        'fullname' 
-                        'email'
-                        'sub'
-                        'msg'
-                        'btn';  
-                    }
+                form {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-areas: 
+                    'fullname' 
+                    'email'
+                    'sub'
+                    'msg'
+                    'btn';  
+                }
 
-                    .container {                        
+                .container {                        
 
-                        .cashapp {
-                            /* 
-                             *  We first create a flex layout context 
-                             */
-                            display: flex;
+                    .cashapp {
+                        /* 
+                            *  We first create a flex layout context 
+                            */
+                        display: flex;
 
-                            /* 
-                             *  Then we define the flow direction
-                             *  and if we allow the items to wrap 
-                             */
-                            flex-direction: column;
-                            flex-wrap: nowrap;
+                        /* 
+                            *  Then we define the flow direction
+                            *  and if we allow the items to wrap 
+                            */
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        
+                        /* 
+                            *  Then we define how the flex items
+                            *  are laid out along the cross axis
+                            *  on the current line
+                            */
+                        align-items: center;
+
+                        // background-color: white;                         
+
+                        .items {
+                            height: 130px;
+                            margin-top: 0.625rem;
+                            // background-color: #666;
+                            // border: 1px solid red;
+
+                            /* .title {
+                                background-color: blue;
+                            } */
                             
-                            /* 
-                             *  Then we define how the flex items
-                             *  are laid out along the cross axis
-                             *  on the current line
-                             */
-                            align-items: center;
-
-                            // background-color: white;
+                            .subtitle {
+                                padding-top: 10px;
+                                padding-bottom: 0;
+                                // background-color: $primary-color;
+                            }
+                        }
+                        a {
+                            order: 4;
 
                             img {
                                 order: 3;
-                                // border: 1px solid red;
-                            } 
-
-                            .items {
-                                height: 130px;
-                                margin-top: 0.625rem;
-                                // background-color: #666;
-                                // border: 1px solid red;
-
-                                /* .title {
-                                    background-color: blue;
-                                } */
-                                
-                                .subtitle {
-                                    padding-top: 10px;
-                                    padding-bottom: 0;
-                                    // background-color: $primary-color;
-                                }
                             }
-                            a {
+
+                            &.link {
                                 align-self: center;
-                                order: 4;
                                 margin: 0.625rem;
                                 font-weight: 500;
                                 // background-color: brown;
@@ -405,15 +511,16 @@
                                     background-color: $white;
                                     padding: 4px;
                                 }
-                            }
+                            }                                                        
                         }
-                                        
-                    } //! end flex container
-            }
-        } //! end element ID 'contact'
+                    } // .cashapp                                    
+                } // end flex container
+            } // .contact-info            
+        } // end element ID 'contact'
+        
+    } // end main section
+} //! @include mediaXS
 
-    } 
-}
 
 //! XSS Smartphones (max-height: 320px)
 //!
@@ -421,25 +528,57 @@
 @include mediaXXSLandscape {
     main {
         min-height: calc(100vh - 60px) !important;
+        padding-right: 2.5rem !important;
+        padding-left: 2.5rem !important;
 
         &#home {
             h1 { 
                 margin-top: 20vh !important;
             }
-        }
+        } // end element ID 'home'
 
         &#about {
             .lg-heading {
-                border: 0px solid yellow;
                 padding-top: 1.3rem;
-
                 [id="full-name"] {
                     display: inline !important;                
                 }
             }
-        }
+        } // end element ID 'about'
+
+        &#contact {
+            .lg-heading {
+                padding-top: 1.3rem;
+                [id="get-in-touch"] {
+                    display: inline !important;                
+                }
+            }
+            .sm-heading {
+                padding: 0.2rem 2rem;
+            }
+            .contact-info {
+                .contact-intro {
+                    margin-right: 40px;
+                    margin-left: 40px; 
+                }
+                form {
+                    margin-right: 40px;
+                    margin-left: 40px; 
+                }
+                .container {
+                    margin-right: 40px;
+                    margin-left: 40px;                       
+                    .cashapp {
+                        .items {
+                            height: 82px;
+                        }
+                    }
+                }                                        
+            } 
+        } // end element ID 'contact'
     }
-}
+} //! @include mediaXXSLandscape
+
 
 //! XSS Smartphones (max-width: 320px)
 @include mediaXXS {
@@ -452,4 +591,4 @@
             }
         }
     }
-}
+} //! @include mediaXXS
