@@ -6994,13 +6994,19 @@ main#contact {
   main#contact .sm-heading {
     margin-bottom: 20px !important; }
   main#contact .contact-info {
-    margin: 20px 100px !important;
+    margin: 2rem 100px !important;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 'text text text text' 'form form ca ca' 'form form ca ca' 'form form ca ca' 'form form ca ca';
     grid-column-gap: 30px; }
     main#contact .contact-info .contact-intro {
       grid-area: text; }
+      main#contact .contact-info .contact-intro a {
+        display: inline-block; }
+      main#contact .contact-info .contact-intro .fas {
+        position: relative;
+        top: -6px;
+        right: 1px; }
     main#contact .contact-info form {
       grid-area: form;
       padding: 10px;
@@ -7021,27 +7027,39 @@ main#contact {
         grid-area: msg; }
       main#contact .contact-info form .btn {
         grid-area: btn; }
-    main#contact .contact-info .ca {
-      grid-area: ca;
-      padding-top: 1rem;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: flex-start;
-      /* .item {
-                        // background-color: black; 
-                    } */ }
-      main#contact .contact-info .ca img {
-        width: 100px;
-        height: 100px; }
-      main#contact .contact-info .ca .items {
-        flex: 0 0 80;
-        margin: 10px 4px; }
-      main#contact .contact-info .ca .one {
-        margin-bottom: 8px;
-        font-weight: 500;
-        color: #ffc107; }
-      main#contact .contact-info .ca .two {
-        margin: 0; }
+    main#contact .contact-info .container {
+      grid-area: ca; }
+      main#contact .contact-info .container .cashapp {
+        display: grid;
+        grid-template-columns: 100px 350px;
+        grid-template-rows: 100px 30px;
+        grid-gap: 5px 5px;
+        padding: 8px;
+        border: 1px solid green;
+        border-radius: 10px; }
+        main#contact .contact-info .container .cashapp img {
+          width: 100px;
+          height: 100px;
+          opacity: .5; }
+          main#contact .contact-info .container .cashapp img:hover {
+            opacity: 1;
+            transition: all 0.5s ease-out; }
+        main#contact .contact-info .container .cashapp .items {
+          margin-bottom: 0.625rem; }
+          main#contact .contact-info .container .cashapp .items .title {
+            font-weight: 500; }
+          main#contact .contact-info .container .cashapp .items .subtitle {
+            font-size: .9345rem; }
+        main#contact .contact-info .container .cashapp a {
+          align-self: start;
+          justify-self: center;
+          font-size: 0.875rem;
+          transition: all 0.5s ease-out;
+          display: inline-flex; }
+          main#contact .contact-info .container .cashapp a .fas {
+            position: relative;
+            top: 0;
+            right: -3px; }
 
 footer {
   margin-top: 0 !important; }
@@ -7251,7 +7269,57 @@ a {
     main#projects .sm-heading {
       font-size: 0.9375rem; }
     main#projects .my-projects {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr; }
+    main#contact .lg-heading {
+      margin-top: 0.8rem;
+      text-align: left; }
+      main#contact .lg-heading [id="get-in-touch"] {
+        display: block; }
+    main#contact .contact-info {
+      margin: 2rem 0 !important;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 30px;
+      grid-template-areas: 'text' 'form' 'form' 'form' 'form' 'ca'; }
+      main#contact .contact-info form {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 'fullname'  'email' 'sub' 'msg' 'btn'; }
+      main#contact .contact-info .container .cashapp {
+        /* 
+                             *  We first create a flex layout context 
+                             */
+        display: flex;
+        /* 
+                             *  Then we define the flow direction
+                             *  and if we allow the items to wrap 
+                             */
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* 
+                             *  Then we define how the flex items
+                             *  are laid out along the cross axis
+                             *  on the current line
+                             */
+        align-items: center; }
+        main#contact .contact-info .container .cashapp img {
+          order: 3; }
+        main#contact .contact-info .container .cashapp .items {
+          height: 130px;
+          margin-top: 0.625rem;
+          /* .title {
+                                    background-color: blue;
+                                } */ }
+          main#contact .contact-info .container .cashapp .items .subtitle {
+            padding-top: 10px;
+            padding-bottom: 0; }
+        main#contact .contact-info .container .cashapp a {
+          align-self: center;
+          order: 4;
+          margin: 0.625rem;
+          font-weight: 500; }
+          main#contact .contact-info .container .cashapp a:hover {
+            background-color: #fff;
+            padding: 4px; } }
 
 @media screen and (max-height: 320px) {
   main {

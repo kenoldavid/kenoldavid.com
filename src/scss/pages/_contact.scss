@@ -14,7 +14,7 @@ main {
         }
 
         .contact-info {
-            margin: 20px 100px !important;
+            margin: 2rem 100px !important;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas: 
@@ -32,6 +32,16 @@ main {
                 .contact-intro {
                     grid-area: text;
                     // background-color: saddlebrown;
+
+                    a {                        
+                        // border: 1px solid red;                
+                        display: inline-block;
+                    }
+                    .fas {
+                        position: relative;
+                        top: -6px;
+                        right: 1px;
+                    }
                 }
                 form {
                     grid-area: form;
@@ -67,45 +77,62 @@ main {
                     }
                 } //! end form
 
-                .ca {
+                .container {
                     grid-area: ca;
-                    padding-top: 1rem;
-                    // background-color: darkmagenta;
-                    
-                    display: flex;
-                    // flex-direction: row;
-                    // flex-wrap: wrap;
-                    justify-content: space-evenly;
-                    align-items: flex-start;
+                    // border: 1px solid red;
 
-                    img {
-                        // opacity: .8;
-                        // border: 1px solid red;
-                        width: 100px;
-                        height: 100px;
-                    }
-                    .items {
-                        // flex-grow: 1;
-                        // flex-shrink: 0;
-                        // flex-basis: 100px;
-                        // order: 0;                        
-                        flex: 0 0 80;
-                        margin: 10px 4px;
+                    .cashapp {
+                        display: grid;
+                        grid-template-columns: 100px 350px;
+                        grid-template-rows: 100px 30px;
+                        grid-gap: 5px 5px;
+                        padding: 8px;
+                        border: 1px solid green;
+                        border-radius: 10px;
+
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            opacity: .5;
+
+                            &:hover {
+                                opacity: 1;
+                                @include easeOut;
+                            }
+                        }
+                        .items { 
+                            // margin-top: 0.625rem;
+                            margin-bottom: 0.625rem;
+                            // background-color: #666;
+                            // border: 1px solid blue; 
+
+                            .title { 
+                                font-weight: 500;
+                                // background-color: #000000;
+                            }
+                            .subtitle {
+                                // padding: 8px 0;
+                                font-size: .9345rem;
+                                // background-color: brown;
+                            }
+                        }
                         
-                        // border: 1px solid blue;                        
-                    }
-                    /* .item {
-                        // background-color: black; 
-                    } */
-                    .one {
-                        margin-bottom: 8px;
-                        font-weight: 500;
-                        color: $secondary-color;
-                        // background-color: darkslategrey;
-                    }
-                    .two {
-                        margin: 0;
-                        // background-color: black;                        
+                        a { 
+                            align-self: start;
+                            justify-self: center;
+                            font-size: 0.875rem;
+                            @include easeOut;
+                            // background-color: #000000; 
+                            
+                            display: inline-flex;
+
+                            .fas {
+                                position: relative;
+                                top: 0;
+                                right: -3px;
+                            }
+                        }
+                        
                     }
                 }
                                           

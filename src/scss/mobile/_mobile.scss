@@ -302,8 +302,7 @@
             } //! end .about-the-site
             
         } //! end element ID 'about'
-
-        
+    
         &#projects {
 
             .sm-heading {
@@ -315,6 +314,104 @@
             }
 
         } // end element ID 'work'
+
+        &#contact {
+            .lg-heading {
+                // border: 1px solid $white;
+                margin-top: 0.8rem;
+                text-align: left;
+
+                [id="get-in-touch"] {
+                    display: block;
+                }
+            }
+
+            .contact-info {
+                margin: 2rem 0 !important;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-row-gap: 30px;
+                grid-template-areas: 
+                    'text'
+                    'form'
+                    'form'
+                    'form'
+                    'form'
+                    'ca';
+
+                    form {
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-template-areas: 
+                        'fullname' 
+                        'email'
+                        'sub'
+                        'msg'
+                        'btn';  
+                    }
+
+                    .container {                        
+
+                        .cashapp {
+                            /* 
+                             *  We first create a flex layout context 
+                             */
+                            display: flex;
+
+                            /* 
+                             *  Then we define the flow direction
+                             *  and if we allow the items to wrap 
+                             */
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                            
+                            /* 
+                             *  Then we define how the flex items
+                             *  are laid out along the cross axis
+                             *  on the current line
+                             */
+                            align-items: center;
+
+                            // background-color: white;
+
+                            img {
+                                order: 3;
+                                // border: 1px solid red;
+                            } 
+
+                            .items {
+                                height: 130px;
+                                margin-top: 0.625rem;
+                                // background-color: #666;
+                                // border: 1px solid red;
+
+                                /* .title {
+                                    background-color: blue;
+                                } */
+                                
+                                .subtitle {
+                                    padding-top: 10px;
+                                    padding-bottom: 0;
+                                    // background-color: $primary-color;
+                                }
+                            }
+                            a {
+                                align-self: center;
+                                order: 4;
+                                margin: 0.625rem;
+                                font-weight: 500;
+                                // background-color: brown;
+
+                                &:hover {
+                                    background-color: $white;
+                                    padding: 4px;
+                                }
+                            }
+                        }
+                                        
+                    } //! end flex container
+            }
+        } //! end element ID 'contact'
+
     } 
 }
 
