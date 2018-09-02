@@ -1,9 +1,9 @@
-/* 
-    Kenol David Responsive Portfolio Bootstrap Sass Theme Website
-    Author: Kenol David, Jr.
-    Date: 29 July 2018
-    Version: 0.0.1
-*/
+/********************************************************************
+ *   Kenol David Responsive Portfolio Bootstrap Sass Theme Website
+ *   Author: Kenol David, Jr.
+ *   Date: 29 July 2018
+ *   Version: 0.0.1
+ ********************************************************************/
 
 //! Framework Sass Files
 /*
@@ -16,8 +16,8 @@
 // @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/tooltip";
 @import "../../node_modules/bootstrap/scss/utilities";
-
 
 /* 
  *   Font Awesome Imports
@@ -27,75 +27,42 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
-
 //! Custom Sass Files
 /* 
-    VARIABLES - sets and overrides variables  
+ *  VARIABLES - sets and overrides variables  
  */
-@import 'variables/_variables';
+@import "variables/_variables";
 
 /* 
-    MIXINS -  
-*/
-@import 'mixins/_mixins';
+ *   MIXINS -  
+ */
+@import "mixins/_mixins";
 
 /* 
-    FUNCTIONS -  
-*/
-@import 'functions/functions';
+ *   FUNCTIONS -  
+ */
+@import "functions/functions";
 
 /* 
-    BASE - Base styles 
-*/
-@import 'base/_base';
-
+ *   BASE - Base styles 
+ */
+@import "base/_base";
 
 /*
-MODULES - Individual site components 
-*/
-@import 'modules/_typography';
-@import 'modules/_buttons';
-
+ *  MODULES - Individual site components 
+ */
+@import "modules/_typography";
+@import "modules/_buttons";
+@import "modules/_tooltip";
 
 /* 
-    MOBILE - Screens media
-*/
-@import 'mobile/_mobile';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ *   MOBILE - Screens media
+ */
+@import "mobile/_mobile";
 
 /*
-    Bootstrap Imports 
-*/
+ *   Bootstrap Imports 
+ */
 //@import "../../node_modules/bootstrap/scss/functions";
 //@import "../../node_modules/bootstrap/scss/variables";
 //@import "../../node_modules/bootstrap/scss/mixins";
