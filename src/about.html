@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+
+    <body>
+        <header>
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+
+            <nav class="menu">
+                <div class="menu-branding">
+                    <div class="portrait"></div>
+                </div>
+                <ul class="menu-nav">
+                    <li class="nav-item text-uppercase">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            home
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase current">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            about
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="projects.html" class="nav-link">
+                            <i class="fas fa-briefcase"></i>
+                            projects
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="blog.html" class="nav-link">
+                            <i class="fas fa-newspaper"></i>
+                            blog
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="about">
+            <h1 class="lg-heading text-capitalize">about
+                <span id="full-name" class="text-secondary">Kenol David</span>
+            </h1>
+
+            <h2 class="sm-heading text-capitalize">
+                a little about me
+            </h2>
+
+            <div class="about-info">
+
+                <div class="bio-img">
+                    <img src=<%= require("./images/portraits/portrait-0.jpg") %> alt="Portrait of Kenol David">
+                </div>
+
+                <div class="bio">
+                    <h2 class="text-secondary text-capitalize">Who is Kenol?</h2>
+
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat illum molestias expedita, soluta corrupti iure atque, minima itaque cumque ducimus dolorem hic? Nihil, sapiente porro itaque velit illo dolores.
+                    </p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat illum molestias expedita, soluta corrupti iure atque, minima itaque cumque ducimus dolorem hic?
+                    </p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat illum molestias expedita, soluta corrupti iure atque, minima itaque cumque ducimus dolorem hic? Nihil, sapiente porro itaque velit illo dolores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat illum molestias expedita, soluta corrupti iure atque, minima itaque cumque ducimus dolorem hic?
+                    </p>
+                    <p>Maiores quaerat illum molestias expedita, soluta corrupti iure atque, minima itaque cumque ducimus dolorem hic? Nihil, sapiente porro itaque velit illo dolores. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+
+                <div class="link">
+                    <a href="#" class="btn btn-outline-primary text-capitalize">
+                        view linkedIn
+                    </a>
+                    <a href="#" class="btn btn-outline-primary text-capitalize">
+                        download resume
+                    </a>
+                </div>
+
+                <h1 class="section-title text-secondary text-capitalize">
+                    selected highlights
+                </h1>
+
+                <div class="job job-1">
+                    <h2 class="company-name">123 webshop</h2>
+                    <h4 class="job-title">full stack developer</h4>
+                    <p class="job-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempore dolor accusantium voluptate, facilis ipsam vel sit quo rerum atque?</p>
+                </div>
+
+                <div class="job job-2">
+                    <h2 class="company-name">456 webshop</h2>
+                    <h4 class="job-title">front end developer</h4>
+                    <p class="job-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempore dolor accusantium voluptate, facilis ipsam vel sit quo rerum atque?</p>
+                </div>
+
+                <div class="job job-3">
+                    <h2 class="company-name">789 webshop</h2>
+                    <h4 class="job-title">back end developer</h4>
+                    <p class="job-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempore dolor accusantium voluptate, facilis ipsam vel sit quo rerum atque?</p>
+                </div>
+
+                <div class="about-the-site">
+                    <h1 class="text-capitalize">about the site</h1>
+                    <p>
+                        This URL has been my online home for many years, manifesting at times as a blog or a portfolio until landing on this current single-column blog. Today it’s a bit of an outlet graveyard for my design-and development-related ramblings.
+                    </p>
+                    <p>In case you were wondering, this site is:</p>
+                    <ul>
+                        <li>
+                            Designed and coded on a Mac in California
+                        </li>
+                        <li>
+                            Coded with Atom
+                        </li>
+                        <li>
+                            Built on Jekyll, the open source static site generator
+                        </li>
+                        <li>
+                            Hosted on GitHub Pages
+                        </li>
+                    </ul>
+                    <p>
+                        You can find more about my macOS development setup in my config repo on GitHub. The design and code powering this site, however, is not available for re-use or purchase.
+                    </p>
+                    <p>
+                        For comments or questions, feel free to ask me on GitHub, on Twitter, or, if you really hate me, via email at markdotto at gmail dot com.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer id="main-footer">
+            <small>
+                made with
+                <i class="fas fa-heart"></i>
+                +
+                <a href="#">
+                    <i class="fas fa-coffee"></i>
+                </a>
+                +
+                <i class="fas fa-code"></i>
+                by
+                <a href="#" class="text-secondary">@kenoldavid</a>
+                in
+                <a href="#">Lauderhill.</a>
+            </small>
+            <small>&copy; 2018 Kenol David</small>
+        </footer>
+
+    </body>
+
+</html>

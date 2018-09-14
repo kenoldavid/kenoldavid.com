@@ -1,4 +1,4 @@
-//! Overriding Bootstrap Framework Sass Variables 
+//! Overriding Bootstrap Framework Sass Variables
 
 //! Color system
 // $white:    #fff !default;
@@ -22,6 +22,7 @@
 // $green:   #28a745 !default;
 // $teal:    #20c997 !default;
 // $cyan:    #17a2b8 !default;
+
 // $success:       $green !default;
 // $info:          $cyan !default;
 // $warning:       $yellow !default;
@@ -29,33 +30,28 @@
 // $light:         $gray-100 !default;
 // $dark:          $gray-800 !default;
 
-$primary:       $gray-700;
-$secondary:     $yellow;
+// $primary: $gray-700;
+// $secondary: $yellow;
 
-$primary-color:     $primary;
-$secondary-color:   $secondary;
-
+// $primary-color: $primary;
+// $secondary-color: $secondary;
 
 //! Body
 // $body-bg:                   $white !default;
 // $body-color:                $primary-color;
 
-
 //! Links
-$link-color:                $white;
-$link-hover-color:          $secondary-color;
-$link-hover-decoration:     none;
-
-
+// $link-color: $white;
+// $link-hover-color: $secondary-color;
+// $link-hover-decoration: none;
 
 //! Custom Sass Variables
 
 //! Flags
-$show-home-image: true;
-
+// $show-home-image: true;
 
 //! Images
-$home-image: url(../img/backgrounds/bg-2.jpg); 
-$default-portrait-image: url(../img/portraits/portrait-4.jpg); 
+// $home-image: url(../img/backgrounds/bg-2.jpg);
+// $default-portrait-image: url(../img/portraits/portrait-4.jpg);
 
-$background-opacity: 0.4;
+// $background-opacity: 0.4;

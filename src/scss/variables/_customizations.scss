@@ -1,0 +1,65 @@
+//!
+//! Overriding Bootstrap Framework Sass Variables
+//!
+
+//! Color system
+$white:    #fff !default;
+$black:    #000 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$blue:     #007bff !default;
+$indigo:   #6610f2 !default;
+$purple:   #6f42c1 !default;
+$pink:     #e83e8c !default;
+$red:      #dc3545 !default;
+$orange:   #fd7e14 !default;
+$yellow:   #ffc107 !default;
+$green:    #28a745 !default;
+$teal:     #20c997 !default;
+$cyan:     #17a2b8 !default;
+
+$primary:   $gray-700;
+$secondary: $yellow;
+
+$primary-color:     $primary;
+$secondary-color:   $secondary;
+
+//! Body
+$body-bg:    $white;
+$body-color: $primary-color;
+
+//! Links
+$link-color: $white;
+$link-hover-color: $secondary-color;
+$link-hover-decoration: none;
+
+//!
+//! Our Custom Sass Variables
+//! 
+
+//* Flags
+$show-home-image:        true;
+$home-image:             url("../images/backgrounds/bg-2.jpg");
+$default-portrait-image: url("../images/portraits/portrait-4.jpg");
+
+
+//* <BODY> Default Background Properties
+$default-body-bg-color:         $body-bg;
+$default-body-bg-image:         url("../images/manhattan-bridge.jpg");
+$default-body-bg-position:      left top;        // left|right|center|initial|inherit 
+$default-body-bg-size:          auto;         // auto|length|cover|contain|initial|inherit
+$default-body-bg-repeat-x:      repeat-x;     // repeat-x|no-repeat|initial|inherit
+$default-body-bg-repeat-y:      repeat-y;     // repeat-y|no-repeat|initial|inherit
+$default-body-bg-origin:        border-box;   // padding-box|border-box|content-box|initial|inherit;
+$default-body-bg-clip:          border-box;   // padding-box|border-box|content-box|initial|inherit;
+$default-body-bg-attachment:    scroll;       // scroll|fixed|local|initial|inherit
+$default-body-bg-blend-mode:    normal;       // normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity
+$default-body-bg-opacity:       0.3;
+$default-body-bg-z-index:       -1;

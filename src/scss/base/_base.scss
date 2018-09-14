@@ -1,20 +1,21 @@
 // @import '../functions/functions';
 
 body {
-    @include page-background-image();
+    // @include page-background-image();
     background-color: $body-color;
     color: set-text-color($primary-color);
-    height: 100vh;
-    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    // height: 100vh;
+    // height: 100%;
+    // font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     // line-height: 1.5;
 }
 
 a {
-    color: $link-color;
+    color: $link-color !important;
     text-decoration: $link-hover-decoration;
 
     &:hover {
-        color: $link-hover-color;
+        color: $link-hover-color !important;
         text-decoration: $link-hover-decoration;
         @include easeOut();
     }
@@ -28,7 +29,9 @@ header {
 
 main {
     min-height: calc(100vh - 60px);
-    padding: 4rem;
+    // padding: 4rem;
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
 }
 
 footer {
@@ -56,6 +59,10 @@ footer {
             color: $red;
         }
 
+        /* .fa-coffee {
+            color: saddlebrown;
+        } */
+
         a {
             &.text-secondary {
                 font-weight: 600;
@@ -64,6 +71,16 @@ footer {
                 &:hover {
                     color: $secondary-color !important;
                 }
+            }
+        }
+
+        #host {
+            // display: block;
+            // width: 100%;
+            // border: 1px solid #fff;
+            img {
+                height: 1.2rem;
+                padding-bottom: 3px;
             }
         }
     }
@@ -80,5 +97,5 @@ footer {
 */
 @import '../pages/_home';
 @import '../pages/_about';
-@import '../pages/_projects';
+// @import '../pages/_projects';
 @import '../pages/_contact';
