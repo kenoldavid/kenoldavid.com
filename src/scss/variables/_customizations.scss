@@ -1,6 +1,8 @@
+//! ****************************************************************
 //!
-//! Overriding Bootstrap Framework Sass Variables
+//!     Overriding Bootstrap Framework Sass Variables
 //!
+//! ****************************************************************
 
 //! Color system
 $white:    #fff !default;
@@ -24,6 +26,7 @@ $yellow:   #ffc107 !default;
 $green:    #28a745 !default;
 $teal:     #20c997 !default;
 $cyan:     #17a2b8 !default;
+$chocolate:#d2691e !default;
 
 $primary:   $gray-700;
 $secondary: $yellow;
@@ -40,19 +43,25 @@ $link-color: $white;
 $link-hover-color: $secondary-color;
 $link-hover-decoration: none;
 
+//! ****************************************************************
 //!
-//! Our Custom Sass Variables
-//! 
+//!     Our Custom Sass Variables
+//!
+//! **************************************************************** 
 
 //* Flags
 $show-home-image:        true;
 $home-image:             url("../images/backgrounds/bg-2.jpg");
+
+$show-site-wide-image:   true;
+$site-wide-image:        url("../images/manhattan-bridge.jpg");
+
 $default-portrait-image: url("../images/portraits/portrait-4.jpg");
 
 
 //* <BODY> Default Background Properties
-$default-body-bg-color:         $body-bg;
-$default-body-bg-image:         url("../images/manhattan-bridge.jpg");
+$default-body-bg-color:         $body-color;
+$default-body-bg-image:         $site-wide-image;
 $default-body-bg-position:      left top;        // left|right|center|initial|inherit 
 $default-body-bg-size:          auto;         // auto|length|cover|contain|initial|inherit
 $default-body-bg-repeat-x:      repeat-x;     // repeat-x|no-repeat|initial|inherit
@@ -61,5 +70,5 @@ $default-body-bg-origin:        border-box;   // padding-box|border-box|content-
 $default-body-bg-clip:          border-box;   // padding-box|border-box|content-box|initial|inherit;
 $default-body-bg-attachment:    scroll;       // scroll|fixed|local|initial|inherit
 $default-body-bg-blend-mode:    normal;       // normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity
-$default-body-bg-opacity:       0.3;
+$default-body-bg-opacity:       0.5;
 $default-body-bg-z-index:       -1;
