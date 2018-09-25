@@ -11,7 +11,8 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
-function toggleMenu() {
+export default function toggleMenu() {
+    console.log("Hello from menuBtn.js!!");
     if(!showMenu) {
         menuBtn.classList.add('close');
         menu.classList.add('show');

@@ -1,84 +1,113 @@
 // @import '../functions/functions';
 
 body {
-    @include page-background-image();
-    background-color: $body-color;
-    color: set-text-color($primary-color);
-    height: 100vh;
-    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    // line-height: 1.5;
+  @include page-background-image();
+  color: set-text-color($primary-color);
+  background-color: $default-body-bg-color;
+  // background-image: $default-body-bg-image;
+  background-position: $default-body-bg-position;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: normal;
+  // height: 100vh;
+  // height: 100%;
+  // font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  // line-height: 1.5;
 }
 
 a {
-    color: $link-color;
-    text-decoration: $link-hover-decoration;
+  color: $link-color !important;
+  text-decoration: $link-hover-decoration;
 
-    &:hover {
-        color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
-        @include easeOut();
-    }
+  &:hover {
+    color: $link-hover-color !important;
+    text-decoration: $link-hover-decoration;
+    @include easeOut();
   }
+}
 
 header {
-    position: fixed;
-    width: 100%;
-    z-index: 2;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 main {
-    min-height: calc(100vh - 60px);
-    padding: 4rem;
+  min-height: calc(100vh - 60px);
+  // padding: 4rem;
+  padding-right: 3.5rem;
+  padding-left: 3.5rem;
 }
 
 footer {
-    
-    &#main-footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
+  &#main-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 
-        min-height: 60px;
-        padding: 1rem;
-        background: darken($primary-color, 10);
-        color: set-text-color($primary-color);
-        text-align: center;
-        
-        // letter-spacing: 2px;
-        word-spacing: 1px;
+    min-height: 60px;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    text-align: center;
 
-        small::first-letter {
-            text-transform: uppercase;
-        }
+    // letter-spacing: 2px;
+    word-spacing: 1px;
 
-        .fa-heart {
-            color: $red;
-        }
-
-        a {
-            &.text-secondary {
-                font-weight: 600;
-                color: set-text-color($primary-color) !important;
-
-                &:hover {
-                    color: $secondary-color !important;
-                }
-            }
-        }
+    small::first-letter {
+      text-transform: uppercase;
     }
+
+    .fa-heart {
+      color: set-icon-color($red);
+    }
+
+    .fa-coffee {
+      color: set-icon-color($chocolate);
+
+      &:hover {
+        color: $secondary-color !important;
+      }
+    }
+
+    .fa-code {
+        color: set-icon-color($blue);
+    }
+
+    a {
+      &.text-secondary {
+        font-weight: 600;
+        color: set-text-color($primary-color) !important;
+
+        &:hover {
+          color: $secondary-color !important;
+        }
+      }
+    }
+
+    #host {
+      // display: block;
+      // width: 100%;
+      // border: 1px solid #fff;
+      img {
+        height: 1.2rem;
+        padding-bottom: 3px;
+      }
+    }
+  }
 } // end footer (about page)
 
 /*
     LAYOUTS - layout styles 
 */
-@import '../layout/_nav';
-
+@import "../layout/_nav";
 
 /*
     PAGES - Indiviual page styles 
 */
-@import '../pages/_home';
-@import '../pages/_about';
-@import '../pages/_projects';
-@import '../pages/_contact';
+@import "../pages/_home";
+@import "../pages/_about";
+// @import '../pages/_projects';
+@import "../pages/_contact";

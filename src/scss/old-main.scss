@@ -5,7 +5,11 @@
  *   Version: 0.0.1
  ********************************************************************/
 
-//! FRAMEWORK SASS FILES
+//! Framework Sass Files
+/*
+ *   Bootstrap Imports 
+ */
+
 /* 
  *   Font Awesome Imports
  */
@@ -14,15 +18,11 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
-
-//! CUSTOM SASS FILES
-
-@import "../scss/starter-template.scss";
-
+//! Custom Sass Files
 /* 
  *  VARIABLES - sets and overrides variables  
  */
-//  @import "variables/_variables";
+@import "variables/_variables";
 
 /* 
  *  MIXINS -  
@@ -30,23 +30,23 @@
 @import "mixins/_mixins";
 
 /* 
-  *  FUNCTIONS -  
-  */
+ *  FUNCTIONS -  
+ */
 @import "functions/functions";
 
 /* 
-  *   BASE - Base styles 
-  */
+ *   BASE - Base styles 
+ */
 @import "base/_base";
 
 /*
-  *  MODULES - Individual site components 
-  */
+ *  MODULES - Individual site components 
+ */
 @import "modules/_typography";
 @import "modules/_buttons";
-//  @import "modules/_tooltip";
+@import "modules/_tooltip";
 
 /* 
-  *   MOBILE - Screens media
-  */
+ *   MOBILE - Screens media
+ */
 @import "mobile/_mobile";

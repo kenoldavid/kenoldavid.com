@@ -6,3 +6,11 @@
         @return $white;
     }
 }
+
+@function set-icon-color($color) {
+    @if (lightness($color) > 40) {
+        @return $color;
+    } @else {
+        @return $white;
+    }
+}
