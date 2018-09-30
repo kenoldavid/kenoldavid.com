@@ -2,7 +2,7 @@
 // import printMe from "./print.js";
 const menuBtn = require("./menuBtn.js");
 
-console.log("Hello from main.js!!");
+console.log("Hello from main.js and octobercms!!!");
 
 // Enable Tooltips Everywhere
 $(function() {

@@ -39,6 +39,8 @@
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
+    "twig": "^1.10.5",
+    "twig-loader": "^0.4.1",
     "url-loader": "^1.1.1",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",

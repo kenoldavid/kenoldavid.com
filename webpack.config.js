@@ -12,7 +12,9 @@ const PurifyCSSPlugin = require("purifycss-webpack");
 // const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 const PATHS = {
-  src: path.join(__dirname, "src")
+  src: path.join(__dirname, "src"),
+  dist: path.resolve(__dirname, "octobercms/themes/legba/assets/dist"),
+  layouts: path.join(__dirname, "octobercms/themes/legba/layouts")
 };
 
 module.exports = env => {
@@ -53,7 +55,7 @@ module.exports = env => {
 
   const cssProd = [
     {
-      loader: MiniCssExtractPlugin.loader
+      loader: MiniCssExtractPlugin.loader,
     },
     {
       /*  Translates CSS into CommonJS modules. 
@@ -77,7 +79,7 @@ module.exports = env => {
   // console.log("cssConfig: ", cssConfig);
 
   const jsAssets = [
-    "./src/js/main.js",
+    "./src/js/main.js"
     // "./src/js/menuBtn"
     // "./src/js/bootstrap.js"
   ];
@@ -100,12 +102,13 @@ module.exports = env => {
     //!-------------------------------------------------------
     output: {
       /* The target directory for all output files. Must be an absolute path (use the Node.js path module). */
-      path: path.resolve(__dirname, "dist"),
+      // path: path.resolve(__dirname, "octobercms/themes/legba/assets/dist"),
+      path: PATHS.dist,
 
       /* The filename template for entry chunks setup for multiple entry points. */
-      filename: "js/[name].bundle.js"
+      filename: "js/[name].bundle.js",
 
-      // publicPath: "/assets/",  // Not working with devServer
+      publicPath: "./themes/legba/assets/dist/",  // Not working with devServer
     },
 
     optimization: {
@@ -128,7 +131,8 @@ module.exports = env => {
     /*  This option provides a simple web server and the ability to use live reloading 
         This tells webpack-dev-server to serve the files from the "public" directory on localhost:8080 */
     devServer: {
-      contentBase: "/dist",
+      contentBase: PATHS.dist,
+      // contentBase: "octobercms/themes/legba/assets/dist",
       // publicPath: "/assets/",/* BUG?!!! */
       port: 8080,
       open: false,
@@ -195,18 +199,14 @@ module.exports = env => {
           test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/,
           loader: "imports-loader?jQuery=jquery"
         },
-        // {
-        //   test: /\.html$/,
-        //   use: [
-        //     {
-        //       loader: "html-loader",
-        //       // options: {
-        //       //   minimize: false
-        //       // }
-        //     }
-        //   ]
-        // }
-        //TODO: Load Data
+        {
+          //* Webpack loader for compiling Twig.js templates.
+          test: /\.twig$/,
+          loader: "twig-loader",
+          options: {
+            // See options section below
+          }
+        }
       ]
     }, //! end "module"
 
@@ -215,57 +215,62 @@ module.exports = env => {
     //!-------------------------------------------------------
     plugins: [
       /* This plugin cleans the /public (output) folder before each build, so that only used files will be generated. */
-      new CleanWebpackPlugin(["dist"]),
+      new CleanWebpackPlugin([
+        `${PATHS.dist}`,
+        `${PATHS.layouts}/*.*`,
+      ]),
+      // new CleanWebpackPlugin([`${PATHS.dist}`]),
 
       /*  This plugin creates HTML files to serve the webpack bundles 
           TODO - Take a look at html-webpack-template
-    */
+      */
       new HtmlWebpackPlugin({
         title: "Welcome To My Portfolio",
         minify: {
-          collapseWhitespace: isProduction ? true : false
+          // collapseWhitespace: isProduction ? true : false
         },
         hash: true,
-        template: "src/index.html", // Load a custom template
-        filename: "index.html" // Generating an output file
+        template: `${PATHS.src}/layouts/home.twig.js`, // Load a custom template
+        filename: `${PATHS.layouts}/home.htm` // Generating an output file
         // excludeChunks: ["bootstrap"]
       }),
 
-      new HtmlWebpackPlugin({
-        title: "Bootstrap Page",
-        minify: {
-          collapseWhitespace: isProduction ? true : false
-        },
-        hash: true,
-        template: "src/bootstrap.html",
-        filename: "bootstrap.html"
-        // chunks: ["bootstrap"]
-      }),
+      // new HtmlWebpackPlugin({
+      //   title: "Bootstrap Page",
+      //   minify: {
+      //     collapseWhitespace: isProduction ? true : false
+      //   },
+      //   hash: true,
+      //   template: "src/bootstrap.html",
+      //   filename: "bootstrap.html"
+      //   // chunks: ["bootstrap"]
+      // }),
 
-      new HtmlWebpackPlugin({
-        title: "About Me - Kenol David",
-        minify: {
-          collapseWhitespace: isProduction ? true : false
-        },
-        hash: true,
-        template: "src/about.html",
-        filename: "about.html"
-        // chunks: ["bootstrap"]
-      }),
+      // new HtmlWebpackPlugin({
+      //   title: "About Me - Kenol David",
+      //   minify: {
+      //     collapseWhitespace: isProduction ? true : false
+      //   },
+      //   hash: true,
+      //   template: "src/about.html",
+      //   filename: "about.html"
+      //   // chunks: ["bootstrap"]
+      // }),
 
-      new HtmlWebpackPlugin({
-        title: "Contact Me - Kenol David",
-        minify: {
-          collapseWhitespace: isProduction ? true : false
-        },
-        hash: true,
-        template: "src/contact.html",
-        filename: "contact.html"
-        // chunks: ["bootstrap"]
-      }),
+      // new HtmlWebpackPlugin({
+      //   title: "Contact Me - Kenol David",
+      //   minify: {
+      //     collapseWhitespace: isProduction ? true : false
+      //   },
+      //   hash: true,
+      //   template: "src/contact.html",
+      //   filename: "contact.html"
+      //   // chunks: ["bootstrap"]
+      // }),
 
       /* This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. It supports On-Demand-Loading of CSS and SourceMaps. */
       new MiniCssExtractPlugin({
+        // filename: "../../themes/legba/assets/dist/css/[name].bundle.css"
         filename: "css/[name].bundle.css"
       }),
 
