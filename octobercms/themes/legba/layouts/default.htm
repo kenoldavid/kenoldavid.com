@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>{{ this.page.title }} - Kenol David</title>
+    <link href="./themes/legba/assets/dist/css/bootstrap.bundle.css?b9a495fa6b5e5d63df91" rel="stylesheet"></head>
+
+    <body id="page-{{ this.page.id }}">
+        <header>
+            <!-- <h1>The header goes here...</h1> -->
+            {% partial "../partials/site/header" %}
+        </header>
+
+        <main id="{{ this.page.id }}">
+            <!-- <h1>The page main content goes here!</h1> -->
+            
+            {% page %}
+        </main>
+
+        <footer id="main-footer">
+            <!-- <h1>The footer goes here...</h1> -->
+            {% partial "../partials/site/footer" %}
+        </footer>
+
+        <!-- JS Scripts -->
+
+    <script type="text/javascript" src="./themes/legba/assets/dist/js/bootstrap.bundle.js?b9a495fa6b5e5d63df91"></script></body>
+
+</html>
