@@ -14,7 +14,8 @@ const PurifyCSSPlugin = require("purifycss-webpack");
 const PATHS = {
   src: path.join(__dirname, "src"),
   dist: path.resolve(__dirname, "octobercms/themes/legba/assets/dist"),
-  layouts: path.join(__dirname, "octobercms/themes/legba/layouts")
+  layouts: path.join(__dirname, "octobercms/themes/legba/layouts"),
+  partials: path.join(__dirname, "octobercms/themes/legba/partials"),
 };
 
 module.exports = env => {
@@ -165,7 +166,7 @@ module.exports = env => {
         },
         {
           //* Load Images
-          test: /\.(png|jpe?g|gif)$/i,
+          test: /\.(svg|png|jpe?g|gif)$/i,
           exclude: /node_modules/,
           include: path.resolve(__dirname, "src/images"),
           use: [
@@ -175,7 +176,7 @@ module.exports = env => {
                 // name: "[hash:6].[ext]",
                 name: "[name].[ext]",
                 outputPath: "images/",
-                publicPath: "../images/"
+                publicPath: isProduction ? "../images/" : "./themes/legba/assets/dist/images/"
               }
             }
           ]
@@ -189,7 +190,7 @@ module.exports = env => {
               options: {
                 name: "[name].[ext]",
                 outputPath: "fonts/",
-                publicPath: "../fonts/"
+                publicPath: isProduction ? "../fonts/" : "./themes/legba/assets/dist/fonts/"
               }
             }
           ]
@@ -230,10 +231,21 @@ module.exports = env => {
           // collapseWhitespace: isProduction ? true : false
         },
         hash: true,
-        template: `${PATHS.src}/layouts/home.twig.js`, // Load a custom template
-        filename: `${PATHS.layouts}/home.htm` // Generating an output file
+        template: `${PATHS.src}/layouts/default.twig.js`, // Load a custom template
+        filename: `${PATHS.layouts}/default.htm` // Generating an output file
         // excludeChunks: ["bootstrap"]
       }),
+      
+      // new HtmlWebpackPlugin({
+      //   title: "About Me",
+      //   minify: {
+      //     // collapseWhitespace: isProduction ? true : false
+      //   },
+      //   hash: true,
+      //   template: `${PATHS.src}/layouts/home.twig.js`, // Load a custom template
+      //   filename: `${PATHS.layouts}/about.htm` // Generating an output file
+      //   // excludeChunks: ["bootstrap"]
+      // }),
 
       // new HtmlWebpackPlugin({
       //   title: "Bootstrap Page",

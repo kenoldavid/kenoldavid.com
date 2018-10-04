@@ -1,0 +1,54 @@
+title = "About Me" 
+url = "/about" 
+layout = "default" 
+meta_title = "kenoldavid.com about me page" 
+meta_description = "This is the official homepage for the kenoldavid.com website. Who is Kenol David?" 
+is_hidden = 0 
+==
+<h1 class="lg-heading text-capitalize">
+    {% content "about/header.htm" %}
+</h1>
+
+<h2 class="sm-heading text-capitalize">
+    {% content "about/sub-header.htm" %}
+</h2>
+
+<div class="about-info">
+
+    <div class="bio-img">
+        <img src="{{ './themes/legba/assets/dist/images/portrait-0.jpg' }}" alt="Portrait of Kenol David">
+    </div>
+
+    <div class="bio">
+        {% content "about/bio.htm" %}
+    </div>
+
+    <div class="link">
+        <a href="#" class="btn btn-outline-primary text-capitalize">
+            view linkedIn
+        </a>
+        <a href="#" class="btn btn-outline-primary text-capitalize">
+            download resume
+        </a>
+    </div>
+
+    <h1 class="section-title text-secondary text-capitalize">
+        selected highlights
+    </h1>
+
+    <div class="job job-1">
+        {% content "about/job-1.htm" %}
+    </div>
+
+    <div class="job job-2">
+        {% content "about/job-2.htm" %}
+    </div>
+
+    <div class="job job-3">
+        {% content "about/job-3.htm" %}
+    </div>
+
+    <div class="about-the-site">
+        {% content "about/about-the-site.htm" %}
+    </div>
+</div>

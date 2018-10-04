@@ -5,7 +5,7 @@
 // TODO: clean this! It's messy.
 @mixin page-background-image {
   @if $show-home-image {
-    &#bg-img {
+    &#page-home {
       background-image: $site-wide-image;
 
       &::after {
@@ -22,7 +22,7 @@
   }
   
   @if $show-site-wide-image {
-    &#site-wide-bg-img {
+    &#page-contact {
       background-image: $site-wide-image;
 
       &::after {
@@ -37,7 +37,7 @@
       }
     }
 
-    &#about-bg-img {
+    &#page-about {
       background-image: $site-wide-image;
       &::after {
         content: "";
