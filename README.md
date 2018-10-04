@@ -2,6 +2,8 @@
 
 Building my personal website.
 
+[![Build Status](https://travis-ci.org/kenoldavid/kenoldavid.com.svg?branch=adding%2Ftravis-ci)](https://travis-ci.org/kenoldavid/kenoldavid.com)
+
 Front End
 ---------
 - HTML5
@@ -12,4 +14,8 @@ Front End
 
 Back End
 --------
-I haven't decided what to use on the back end, yet.
+- OctoberCMS
+- Travis CI
+- Webpack 4
+
+I haven't decided what else to use on the back end, yet.
