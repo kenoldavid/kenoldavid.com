@@ -3,6 +3,7 @@ main {
 
     &#home {
         overflow: hidden;
+        min-height: calc(100vh - 60px);
         padding-right: 3.5rem;
         padding-left: 3.5rem;
 

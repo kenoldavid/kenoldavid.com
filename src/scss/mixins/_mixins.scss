@@ -22,34 +22,34 @@
   }
   
   @if $show-site-wide-image {
-    &#page-contact {
-      background-image: $site-wide-image;
+    // &#page-about {
+    //   background-image: $page-image;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 105%;
-        z-index: -1;
-        background: rgba($primary-color, $default-body-bg-opacity + 0.2);
-      }
-    }
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: -1;
+    //     background: rgba($primary-color, $default-body-bg-opacity + 0.2);
+    //   }
+    // }
 
-    &#page-about {
-      background-image: $site-wide-image;
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 185%;
-        z-index: -1;
-        background: rgba($primary-color, $default-body-bg-opacity + 0.1);
-      }
-    }
+    // &#page-contact {
+    //   background-image: $page-image;
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: -1;
+    //     background: rgba($primary-color, $default-body-bg-opacity + 0.1);
+    //   }
+    // }
   }
 }
 

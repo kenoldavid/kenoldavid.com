@@ -1,4 +1,8 @@
 // @import '../functions/functions';
+html {
+  height: 100%;
+  // background-color: $yellow;
+}
 
 body {
   @include page-background-image();
@@ -10,10 +14,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: normal;
-  // height: 100vh;
-  // height: 100%;
   // font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   // line-height: 1.5;
+
+  min-height: 100%;
 }
 
 a {
@@ -34,6 +38,7 @@ header {
 }
 
 main {
+  // min-height: calc(96.7vh - 60px);
   min-height: calc(100vh - 60px);
   // padding: 4rem;
   padding-right: 3.5rem;
