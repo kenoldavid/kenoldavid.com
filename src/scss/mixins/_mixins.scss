@@ -6,7 +6,7 @@
 @mixin page-background-image {
   @if $show-home-image {
     &#page-home {
-      background-image: $site-wide-image;
+      background-image: $landing-page-image;
 
       &::after {
         content: "";
@@ -16,42 +16,12 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: rgba($primary-color, $default-body-bg-opacity - 0.1);
+        background: rgba($body-color, $default-body-bg-opacity - 0.1);
       }
     }
   }
-  
-  @if $show-site-wide-image {
-    // &#page-about {
-    //   background-image: $page-image;
-
-    //   &::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     z-index: -1;
-    //     background: rgba($primary-color, $default-body-bg-opacity + 0.2);
-    //   }
-    // }
-
-    // &#page-contact {
-    //   background-image: $page-image;
-    //   &::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     z-index: -1;
-    //     background: rgba($primary-color, $default-body-bg-opacity + 0.1);
-    //   }
-    // }
-  }
 }
+
 
 // Extra extra small devices (portrait phones, less than 576px)
 @mixin mediaXXS {

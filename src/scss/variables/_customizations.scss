@@ -27,8 +27,9 @@ $green:    #28a745 !default;
 $teal:     #20c997 !default;
 $cyan:     #17a2b8 !default;
 $chocolate:#d2691e !default;
+$dark-blue:#15151c !default;
 
-$primary:   $gray-700;
+$primary:   #1c1c22;
 $secondary: $yellow;
 
 $primary-color:     $primary;
@@ -51,20 +52,19 @@ $link-hover-decoration: none;
 
 //* Flags
 $show-home-image:        true;
-$home-image:             url("../images/backgrounds/bg-2.jpg");
+$show-site-wide-image:   false;
 
-$show-site-wide-image:   true;
+
+//* Images
+$landing-page-image:     url("../images/backgrounds/bg.jpg");
 $site-wide-image:        url("../images/manhattan-bridge.jpg");
-
-$page-image:             url("../images/backgrounds/bg-6.jpg");
-
 $default-portrait-image: url("../images/portraits/portrait-4.jpg");
 
 
 //* <BODY> Default Background Properties
 $default-body-bg-color:         $body-color;
 $default-body-bg-image:         $site-wide-image;
-$default-body-bg-position:      left top;        // left|right|center|initial|inherit 
+$default-body-bg-position:      left top;     // left|right|center|initial|inherit 
 $default-body-bg-size:          auto;         // auto|length|cover|contain|initial|inherit
 $default-body-bg-repeat-x:      repeat-x;     // repeat-x|no-repeat|initial|inherit
 $default-body-bg-repeat-y:      repeat-y;     // repeat-y|no-repeat|initial|inherit
@@ -74,3 +74,8 @@ $default-body-bg-attachment:    scroll;       // scroll|fixed|local|initial|inhe
 $default-body-bg-blend-mode:    normal;       // normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity
 $default-body-bg-opacity:       0.5;
 $default-body-bg-z-index:       -1;
+
+
+//* <FOOTER> Default Properties
+// $footer__default-bg-color: $dark-blue;
+$footer__default-bg-color: $dark-blue;

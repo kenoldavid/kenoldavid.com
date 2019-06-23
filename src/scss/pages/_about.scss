@@ -46,7 +46,7 @@ main {
                     background-position: 50% 50%;
                     opacity: 1;
                     border-radius: 50%;                                        
-                    border: solid 0px $secondary-color;
+                    border: solid 2px $white;
                 }
                
             } //! end .bio-img
@@ -76,11 +76,16 @@ main {
             .section-title {
                 grid-area: hdr;                                         
                 // background-color: darkgreen;
+                margin-bottom: 0.5rem;
+                padding: 0.5rem;
             } //! end .highlights
 
             .job {
                 padding: 0.5rem;
-                background: lighten($primary-color, 5);
+                background: lighten($dark-blue, 2);
+                // background: lighten($primary-color, 5);
+                // background: $dark-blue;
+                // background: $gray-900;
                 border-bottom: solid 5px $secondary-color;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
@@ -93,7 +98,8 @@ main {
 
             .job-1 {
                 grid-area: job1;
-                margin-top: -33px;
+                // margin-top: -33px;
+                margin-top: -30px;
             }
     
             .job-2 {
@@ -118,7 +124,12 @@ main {
                 border-top-left-radius: 25px;
                 border-top-right-radius: 25px;
 
+                // background: #006399;
                 background: rgba(lighten($primary-color, 3), 0.5);
+
+                h1 {
+                    margin-bottom: 1rem;
+                }
             } //! end .about-the-site
 
         } //! end .about-info

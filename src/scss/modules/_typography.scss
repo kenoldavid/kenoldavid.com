@@ -10,14 +10,20 @@ h4, h5, h6 {
 
     &.sm-heading {
         margin-bottom: 2rem;
-        padding: 0.2rem 1rem;   
+        // padding: 0.2rem 1rem;   
+        padding-top: 0.2rem;  
+        padding-bottom: 0.2rem;  
+        padding-right: 1rem;  
+        padding-left: 1rem;
         background: rgba(lighten($primary-color, 3), 0.5);
         // letter-spacing: 2px;
         // word-spacing: 4px;
         
         &::first-letter {
             text-transform: uppercase;
-        }     
+        }  
+        
+
     }
 }
 
