@@ -10,6 +10,11 @@ main {
       margin-top: 30vh;
     }
 
+    h1,
+    h2 {
+      line-height: $default-line-height;
+    }
+
     h2 {
       padding-bottom: 0.36rem !important;
       color: $gray-500;

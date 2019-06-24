@@ -6,6 +6,22 @@ html {
 
 body {
   @include page-background-image();
+
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Oxygen&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans&display=swap');
+
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+  @import url("https://fonts.googleapis.com/css?family=Indie+Flower|Lato|Oswald|Raleway");
+  @import url("https://fonts.googleapis.com/css?family=Oswald");
+
+  font-family: $default-font-family;
+  font-style: $default-font-style;
+  font-weight: $default-font-weight;
+  // font-size: $default-font-size;
+  line-height: $default-line-height;
+  // color: $default-font-color;
+
   color: set-text-color($primary-color);
   background-color: $default-body-bg-color;
   // background-image: $default-body-bg-image;
@@ -14,9 +30,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: normal;
-  // font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  // line-height: 1.5;
-
   min-height: 100%;
 }
 
@@ -38,9 +51,7 @@ header {
 }
 
 main {
-  // min-height: calc(96.7vh - 60px);
   min-height: calc(100vh - 60px);
-  // padding: 4rem;
   padding-right: 3.5rem;
   padding-left: 3.5rem;
 }
@@ -59,7 +70,9 @@ footer {
     color: set-text-color($primary-color);
     text-align: center;
 
-    // letter-spacing: 2px;
+    font-family: $default-font-family-paragraphs;
+
+    letter-spacing: 1px;
     word-spacing: 1px;
 
     small::first-letter {
@@ -79,12 +92,12 @@ footer {
     }
 
     .fa-code {
-        color: set-icon-color($blue);
+      color: set-icon-color($blue);
     }
 
     a {
       &.text-secondary {
-        font-weight: 600;
+        // font-weight: 500;
         color: set-text-color($primary-color) !important;
 
         &:hover {

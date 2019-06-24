@@ -1,14 +1,20 @@
 h1, h2, h3, 
 h4, h5, h6 {
     margin: 0; 
-    padding: 0;
-    font-weight: 400;    
+    padding: 0;    
+
+    font-family: $default-font-family;
+    font-weight: 400;   
+    
 
     &.lg-heading {
+        font-family: $default-font-family;
         font-size: 4rem;
     }
 
     &.sm-heading {
+        font-family: $default-font-family-paragraphs;
+        font-size: $default-font-size-subtitle;
         margin-bottom: 2rem;
         // padding: 0.2rem 1rem;   
         padding-top: 0.2rem;  
@@ -25,6 +31,11 @@ h4, h5, h6 {
         
 
     }
+}
+
+p {
+    font-family: $default-font-family-paragraphs;
+    font-size: $default-font-size;
 }
 
 a {

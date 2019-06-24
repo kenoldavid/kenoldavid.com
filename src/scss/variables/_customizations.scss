@@ -79,3 +79,22 @@ $default-body-bg-z-index:       -1;
 //* <FOOTER> Default Properties
 // $footer__default-bg-color: $dark-blue;
 $footer__default-bg-color: $dark-blue;
+
+
+//* Fonts & Line Heights  *// 
+$default-font-size: 18px;
+$default-font-family: 'Varela Round', sans-serif;
+// $default-font-family: 'Oswald', 'Roboto Slab', serif;
+// $default-font-family-paragraphs: 'PT Sans', sans-serif;
+// $default-font-family-paragraphs: 'Open Sans', sans-serif;
+$default-font-family-paragraphs: 'Oxygen', sans-serif;
+$default-font-style: normal;
+$default-font-weight: normal;
+// $default-font-color: #000000;
+$default-line-height: 2;
+
+/* Titles */
+$default-font-size-title: 64px;
+
+/* Subtitles */
+$default-font-size-subtitle: 26px;
