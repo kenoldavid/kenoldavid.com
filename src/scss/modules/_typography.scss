@@ -1,49 +1,59 @@
-h1, h2, h3, 
-h4, h5, h6 {
-    margin: 0; 
-    padding: 0;    
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 
-    font-family: $default-font-family;
-    font-weight: 400;   
-    
+  font-family: $default-font-family;
+  font-weight: 400;
 
-    &.lg-heading {
-        font-family: $default-font-family;
-        font-size: 4rem;
+  &.lg-heading {
+    p {
+      margin-bottom: 0 !important;
+      font-family: $default-font-family;
+      font-size: 4rem;
     }
+  }
 
-    &.sm-heading {
-        font-family: $default-font-family-paragraphs;
-        font-size: $default-font-size-subtitle;
-        margin-bottom: 2rem;
-        // padding: 0.2rem 1rem;   
-        padding-top: 0.2rem;  
-        padding-bottom: 0.2rem;  
-        padding-right: 1rem;  
-        padding-left: 1rem;
-        background: rgba(lighten($primary-color, 3), 0.5);
-        // letter-spacing: 2px;
-        // word-spacing: 4px;
-        
-        &::first-letter {
-            text-transform: uppercase;
-        }  
-        
+  &.sm-heading {
+    // color: $gray-500;
+    background: rgba(lighten($primary-color, 3), 0.5);
+    p {
+      margin-bottom: 2rem;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      // background: rgba(lighten($primary-color, 3), 0.5);
+      // font-family: $default-font-family-paragraphs;
+      font-family: "Cookie", cursive !important;
+      font-size: $default-font-size-subtitle + 4px;
+      font-weight: 500;
+      color: $gray-500;
+      letter-spacing: 2.1px;
 
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
+  }
 }
 
 p {
-    font-family: $default-font-family-paragraphs;
-    font-size: $default-font-size;
+  font-family: $default-font-family-paragraphs;
+  font-size: $default-font-size;
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .text-secondary {
-    color: $secondary-color !important;    
-    // color: $secondary-color;    
+  color: $secondary-color !important;
+  // color: $secondary-color;
 }

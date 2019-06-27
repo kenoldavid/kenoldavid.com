@@ -2,9 +2,35 @@
     made with
     <i class="fas fa-heart"></i>
     +
-    <a href="#">
+    <a
+        href="#"
+        id="bmc"
+        data-toggle="popover"
+        data-container="body"
+        data-trigger="click hover"
+        data-placement="top"
+        data-html="true"
+    >
         <i class="fas fa-coffee"></i>
     </a>
+    <span id="popover-content-bmc" hidden>
+        <h4 class="popover-header">
+                <i class="fas fa-info-circle"></i>
+                I'm a huge fan of great quality Haitian coffee! All of Haiti’s coffee is Arabica, the high-quality bean used in gourmet coffees. So I rotate between Café Sèlècto and Cafe Rebo.
+        </h4>
+        <a
+            class="bmc-button"
+            target="_blank"
+            href="https://www.buymeacoffee.com/mpIezrqWd"
+        >
+            <img
+                src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
+                alt="Buy Ken a coffee"
+            />
+            <span style="margin-left:5px">Buy Ken a coffee</span>
+        </a>
+    </span>
+    <!--  -->
     +
     <i class="fas fa-code"></i>
     by
@@ -17,8 +43,14 @@
     {{ "now" | date("Y") }}
     Kenol David
 </small>
-<small id="host">Proudly hosted with
+<small id="host"
+    >Proudly hosted with
     <span>
-        <img src="{{ './themes/legba/assets/dist/images/DO_Logo_Horizontal_White.png' }}" alt="DigitalOcean Logo">
+        <img
+            src="{{
+                './themes/legba/assets/dist/images/DO_Logo_Horizontal_White.png'
+            }}"
+            alt="DigitalOcean Logo"
+        />
     </span>
 </small>

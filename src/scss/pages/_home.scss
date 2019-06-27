@@ -12,12 +12,12 @@ main {
 
     h1,
     h2 {
-      line-height: $default-line-height;
+      line-height: $default-line-height - 0.5;
     }
 
     h2 {
+      padding-top: 0.36rem !important;
       padding-bottom: 0.36rem !important;
-      color: $gray-500;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       border-bottom-left-radius: 5px;
@@ -25,7 +25,10 @@ main {
 
       p {
         margin-bottom: 0 !important;
-        padding: 0 !important;
+        // border-top-left-radius: 5px;
+        // border-top-right-radius: 5px;
+        // border-bottom-left-radius: 5px;
+        // border-bottom-right-radius: 5px;
       }
     }
 
