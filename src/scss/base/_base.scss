@@ -7,9 +7,13 @@ html {
 body {
   @include page-background-image();
 
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Oxygen&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans&display=swap');
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans|Oxygen&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Wendy+One&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Kanit:500&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Suez+One&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Sonsie+One&display=swap");
 
   @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
   @import url("https://fonts.googleapis.com/css?family=Indie+Flower|Lato|Oswald|Raleway");
@@ -48,6 +52,18 @@ header {
   position: fixed;
   width: 100%;
   z-index: 2;
+
+  #logo {
+    position: absolute;
+    top: 22px;
+    left: 35px;
+    z-index: 100;
+    cursor: pointer;
+
+    h1 {
+      font-family: "Sonsie One", cursive !important;
+    }
+  }
 }
 
 main {

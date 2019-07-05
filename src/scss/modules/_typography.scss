@@ -11,28 +11,30 @@ h6 {
   font-weight: 400;
 
   &.lg-heading {
+
     p {
       margin-bottom: 0 !important;
       font-family: $default-font-family;
       font-size: 4rem;
+      font-weight: 600;
+      // font-style: italic;
+
     }
   }
 
   &.sm-heading {
-    // color: $gray-500;
-    background: rgba(lighten($primary-color, 3), 0.5);
+
+    background: rgba(#343d4c, 0.6);
+
     p {
       margin-bottom: 2rem;
       padding-top: 0.2rem;
       padding-bottom: 0.2rem;
       padding-right: 1rem;
       padding-left: 1rem;
-      // background: rgba(lighten($primary-color, 3), 0.5);
-      // font-family: $default-font-family-paragraphs;
       font-family: "Cookie", cursive !important;
       font-size: $default-font-size-subtitle + 4px;
-      font-weight: 500;
-      color: $gray-500;
+      color: $gray-400 !important;
       letter-spacing: 2.1px;
 
 
