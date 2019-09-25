@@ -16,4 +16,4 @@ I haven't decided what to use on the back end, yet.
 
 Deployment
 --------
-I'm using the [Simple Automated Git Deployment using git Hooks](https://gist.github.com/noelboss/3fe13927025b89757f8fb12e9066f2fa) guide.
+I'm using a [Simple Automated Git Deployment using git Hooks](https://gist.github.com/noelboss/3fe13927025b89757f8fb12e9066f2fa)
