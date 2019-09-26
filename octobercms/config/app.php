@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'debug' => true,
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'October CMS',
+    'name' => 'samsung-pc.kenoldavid.local',
 
     /*
     |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'url' => 'http://kenoldavid.win',
+    'url' => env('APP_URL', 'http://samsung-pc.kenoldavid.local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/New_York',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'key' => 'mH2ZkXt8yEDlDitNBnXUewTiuBkbfUDl',
+    'key' => env('APP_KEY', ''),
 
     'cipher' => 'AES-256-CBC',
 
