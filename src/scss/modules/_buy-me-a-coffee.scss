@@ -33,6 +33,15 @@ div.popover {
   border-bottom: 1px solid rgb(129, 112, 48);
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
+
+  .coffee {
+    color: $dark-blue !important;
+    text-decoration: underline;
+
+    &:hover {
+      color: set-text-color($dark-blue) !important;
+    }
+  }
 }
 
 .bmc-button img {
@@ -75,6 +84,6 @@ div.popover {
   opacity: 0.85 !important;
   color: #000000 !important;
 }
-.bmc-button span {
+// .bmc-button span {
   // font-size: 22px !important;
-}
+// }

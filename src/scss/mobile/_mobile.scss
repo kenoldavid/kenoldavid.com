@@ -581,6 +581,8 @@
 
 
 //! XSS Smartphones (max-width: 320px)
+//!
+//! Portrait mode
 @include mediaXXS {
     main {
         // min-height: calc(94.98vh - 60px) !important;

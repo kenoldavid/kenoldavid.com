@@ -32,6 +32,14 @@ main {
       }
     }
 
+    .fa-fist-raised:before {
+      content: "\f6de";
+    }
+
+    .fa-fist-raised {
+      color: $magenta;
+    }
+
     .icons {
       margin-top: 1rem;
 
@@ -45,19 +53,19 @@ main {
           @include easeOut();
         }
 
-        svg {
-          width: 38px;
-          height: 38px;
+        // svg {
+        //   width: 38px;
+        //   height: 38px;
 
-          path {
-            fill: #ffffff;
+        //   path {
+        //     fill: #ffffff;
 
-            &:hover {
-              fill: $link-hover-color;
-              @include easeOut();
-            }
-          }
-        }
+        //     &:hover {
+        //       fill: $link-hover-color;
+        //       @include easeOut();
+        //     }
+        //   }
+        // }
 
         /* svg:hover path {
                     fill: red;

@@ -15,42 +15,67 @@
     </a>
     <span id="popover-content-bmc" hidden>
         <h4 class="popover-header">
-                <i class="fas fa-info-circle"></i>
-                I'm a huge fan of great quality Haitian coffee! All of Haiti’s coffee is Arabica, the high-quality bean used in gourmet coffees. So I rotate between Café Sèlècto and Cafe Rebo.
+            <i class="fas fa-info-circle"></i>
+            {% content "home/footer/ctn_buymeacoffee" %}
         </h4>
         <a
             class="bmc-button"
             target="_blank"
-            href="https://www.buymeacoffee.com/mpIezrqWd"
+            href='{% content "external-links/url_buymeacoffee.txt" %}'
         >
             <img
                 src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
                 alt="Buy Ken a coffee"
             />
-            <span style="margin-left:5px">Buy Ken a coffee</span>
+            <span style="margin-left:4.8px"
+                >{% content "home/footer/btn_buymeacoffee" %}</span
+            >
         </a>
     </span>
     <!--  -->
     +
     <i class="fas fa-code"></i>
     by
-    <a href="#" class="text-secondary">@kenoldavid</a>
+    <a
+        class="text-secondary"
+        target="_blank"
+        href='{% content "external-links/url_twitter.htm" %}'
+        data-toggle="tooltip"
+        data-html="true"
+        data-placement="top"
+        title='<i class="fab fa-twitter" style="color: #1b95e0"></i> {% content "home/footer/ctn_twitter" %}'
+    >
+        @kenoldavid
+    </a>
     in
-    <a href="#">Lauderhill.</a>
+    <a
+        id="location"
+        target="_blank"
+        href='{% content "external-links/url_map-lauderhill-fl" %}'
+        data-toggle="tooltip"
+        data-html="true"
+        data-placement="top"
+        title='<i class="fas fa-globe-americas" style="color: #0178BD"></i> {% content "home/footer/ctn_cityoflauderhill" %}'
+        >Lauderhill<i class="fas fa-external-link-alt fa-xs" style="font-size: 8px; position: relative; padding-left:4px; top: -6px;"></i>.</a
+    >
 </small>
 <small id="copyright">
     &copy;
     {{ "now" | date("Y") }}
     Kenol David
 </small>
-<small id="host"
-    >Proudly hosted with
-    <span>
-        <img
-            src="{{
-                './themes/legba/assets/dist/images/DO_Logo_Horizontal_White.png'
-            }}"
-            alt="DigitalOcean Logo"
-        />
-    </span>
+<small id="host">
+    <!-- hosted with ❤️️ by  -->
+    hosted by
+    <a
+        class="digital-ocean"
+        target="_blank"
+        href='{% content "external-links/url_digital-ocean.htm" %}'
+        data-toggle="tooltip"
+        data-placement="top"
+        title='{% content "home/footer/referrals_digital-ocean" %}'
+    >
+        <i class="fab fa-digital-ocean"></i>
+        DigitalOcean
+    </a>
 </small>

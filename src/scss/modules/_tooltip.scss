@@ -1,0 +1,39 @@
+/* Tooltip recoloring 
+======================*/
+.tooltip.bs-tooltip-top > .tooltip-inner {
+    background-color: $gray-700;
+}
+
+/* Top Arrow
+======================*/
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: $gray-700;
+}
+
+/* Right Arrow 
+======================*/
+// .tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+//     margin-top: -3px;
+//     content: "";
+//     border-width: 5px 5px 5px 0;
+//     border-right-color: #000;
+// }
+
+/* Bottom Arrow 
+======================*/
+// .tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+//     margin-left: -3px;
+//     content: "";
+//     border-width: 0 5px 5px;
+//     border-bottom-color: #000;
+// }
+
+/* Left Arrow 
+======================*/
+// .tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+//     right: 0;
+//     margin-top: -3px;
+//     content: "";
+//     border-width: 5px 0 5px 5px;
+//     border-left-color: #000;
+// }
