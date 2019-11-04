@@ -12,7 +12,8 @@ Front End
 
 Back End
 --------
-I haven't decided what to use on the back end, yet.
+- OctoberCMS
+I haven't decided what else to use on the back end, yet.
 
 Deployment
 --------
