@@ -20,7 +20,7 @@ h6 {
 
   &.sm-heading {
     // color: $gray-500;
-    background: rgba(lighten($primary-color, 3), 0.5);
+    background: rgba(lighten($primary-color, 3), 0.85);
     p {
       margin-bottom: 2rem;
       padding-top: 0.2rem;
@@ -29,10 +29,11 @@ h6 {
       padding-left: 1rem;
       // background: rgba(lighten($primary-color, 3), 0.5);
       // font-family: $default-font-family-paragraphs;
-      font-family: "Cookie", cursive !important;
+      // font-family: "Cookie", cursive !important;
+      font-family: "Cookie", cursive;
       font-size: $default-font-size-subtitle + 4px;
       font-weight: 500;
-      color: $gray-500;
+      color: $gray-400;
       letter-spacing: 2.1px;
 
 
