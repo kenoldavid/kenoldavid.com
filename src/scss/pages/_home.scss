@@ -74,6 +74,14 @@ main {
       color: $magenta;
     }
 
+    .fa-globe-americas:before {
+      content: "\f57d";
+    }
+
+    .fa-angle-double-right:before {
+      content: "\f101";
+    }
+
     .icons {
       margin-top: 1rem;
 
