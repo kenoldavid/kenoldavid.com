@@ -57,7 +57,8 @@ $show-site-wide-image:   false;
 
 
 //* Images
-$landing-page-image:     url("../images/backgrounds/bg.jpg");
+$landing-page-image:     url("../images/backgrounds/landing.jpg");
+// $landing-page-image:     url("../images/backgrounds/bg.jpg");
 $site-wide-image:        url("../images/manhattan-bridge.jpg");
 $default-portrait-image: url("../images/portraits/portrait-4.jpg");
 
@@ -83,7 +84,7 @@ $footer__default-bg-color: $dark-blue;
 
 
 //* Fonts & Line Heights  *// 
-$default-font-size: 18px;
+$default-font-size: 16px;
 $default-font-family: 'Varela Round', sans-serif;
 // $default-font-family: 'Oswald', 'Roboto Slab', serif;
 // $default-font-family-paragraphs: 'PT Sans', sans-serif;

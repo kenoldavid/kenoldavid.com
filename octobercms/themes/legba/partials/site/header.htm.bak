@@ -1,0 +1,45 @@
+<div class="menu-btn">
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+</div>
+
+<nav class="menu">
+    <div class="menu-branding">
+        <div class="portrait"></div>
+    </div>
+    <ul class="menu-nav">
+        <li class="nav-item text-uppercase current">
+            <a href="/" class="nav-link">
+                <i class="fas fa-home"></i>
+                home
+            </a>
+        </li>
+        <!-- TODO - Re-activate the ABOUT page later when refactored -->
+        <!-- <li class="nav-item text-uppercase">
+            <a href="about" class="nav-link">
+                <i class="fas fa-info-circle"></i>
+                about
+            </a>
+        </li> -->
+        <!-- TODO - Activate These Pages Later -->
+        <!-- <li class="nav-item text-uppercase">
+            <a href="projects.html" class="nav-link">
+                <i class="fas fa-briefcase"></i>
+                projects
+            </a>
+        </li>
+        <li class="nav-item text-uppercase">
+            <a href="blog.html" class="nav-link">
+                <i class="fas fa-newspaper"></i>
+                blog
+            </a>
+        </li> 
+        <li class="nav-item text-uppercase">
+            <a href="contact" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                contact
+            </a>
+        </li> -->
+    </ul>
+</nav>

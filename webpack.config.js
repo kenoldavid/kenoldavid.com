@@ -80,7 +80,8 @@ module.exports = env => {
   // console.log("cssConfig: ", cssConfig);
 
   const jsAssets = [
-    "./src/js/main.js"
+    "./src/js/main.js",
+    "./src/js/menu.js"
     // "./src/js/menuBtn"
     // "./src/js/bootstrap.js"
   ];

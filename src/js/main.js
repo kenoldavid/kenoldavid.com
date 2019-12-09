@@ -1,11 +1,18 @@
 // import _ from "lodash";
 // import printMe from "./print.js";
-const menuBtn = require("./menuBtn.js");
+// const menuBtn = require("./menuBtn.js");
 
 console.log("Hello from main.js and octobercms!!!");
 
+// Select the active menu link
+// $("#menu li a").click(function() {
+//   $(this).addClass("current");
+//   // $(this).siblings().removeClass("current");
+// });
+
+
 // Enable Tooltips Everywhere
-$(function() {
+$(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
@@ -15,11 +22,11 @@ $(function() {
 // });
 
 // Enable Popovers for specific elements (w/ HTML content)
-$(function() {
-  $('[data-toggle="popover"]').each(function(i, obj) {
+$(function () {
+  $('[data-toggle="popover"]').each(function (i, obj) {
     $(this).popover({
       html: true,
-      content: function() {
+      content: function () {
         var id = $(this).attr('id')
         return $('#popover-content-' + id).html();
       }
