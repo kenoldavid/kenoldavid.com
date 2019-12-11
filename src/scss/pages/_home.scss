@@ -1,24 +1,29 @@
 // MAIN section for the home page
 main {
+
   &#home {
-    overflow: hidden;
-    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // overflow: hidden;
+    // min-height: calc(100vh - 60px);
     // padding-right: 3.5rem;
     // padding-left: 3.5rem;
 
-    h1 {
-      // margin-top: 26vh;
-      margin-top: 20vh;
-    }
+    // h1 {
+    //   margin-top: 26vh;
+    //   margin-top: 20vh;
+    // }
 
     // Targeting only Firefox with CSS
     // @-moz-document url-prefix() {
-    @supports (-moz-appearance: none) {
-      h1 {
-        margin-top: 24vh;
-        // color: $green;
-      }
-    }
+    // @supports (-moz-appearance: none) {
+    //   h1 {
+    //     margin-top: 24vh;
+    //     color: $green;
+    //   }
+    // }
 
     h1,
     h2,
