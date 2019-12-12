@@ -167,7 +167,7 @@ module.exports = env => {
         },
         {
           //* Load Images
-          test: /\.(svg|png|jpe?g|gif)$/i,
+          test: /\.(svg|png|jpe?g|gif|webp)$/i,
           exclude: /node_modules/,
           include: path.resolve(__dirname, "src/images"),
           use: [
