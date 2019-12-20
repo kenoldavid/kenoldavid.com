@@ -18,15 +18,16 @@
         <meta name="theme-color" content="#1c1c22">
 
         <title>{{ this.page.title }} - Kenol David</title>
-    <link href="./themes/legba/assets/dist/css/bootstrap.bundle.css?517b3cab76053f50d261" rel="stylesheet"></head>
+    <link href="./themes/legba/assets/dist/css/bootstrap.bundle.css?0d21ff709937dc13b98f" rel="stylesheet"></head>
 
     <body id="page-{{ this.page.id }}">
-        <header>
+        <!-- <header>-->
+        <header> 
             <!-- <h1>The header goes here...</h1> -->
             {% partial "../partials/site/header" %}
         </header>
 
-        <main id="{{ this.page.id }}">
+        <main id="{{ this.page.id }}" class="main">
             <!-- <h1>The page main content goes here!</h1> -->
             
             {% page %}
@@ -39,6 +40,6 @@
 
         <!-- JS Scripts -->
 
-    <script type="text/javascript" src="./themes/legba/assets/dist/js/bootstrap.bundle.js?517b3cab76053f50d261"></script></body>
+    <script type="text/javascript" src="./themes/legba/assets/dist/js/bootstrap.bundle.js?0d21ff709937dc13b98f"></script></body>
 
 </html>

@@ -81,7 +81,8 @@ module.exports = env => {
 
   const jsAssets = [
     "./src/js/main.js",
-    "./src/js/menu.js"
+    "./src/js/menu.js",
+    "./src/js/observer.js"
     // "./src/js/menuBtn"
     // "./src/js/bootstrap.js"
   ];

@@ -2,6 +2,8 @@
 // Menu Overlay
 
 nav {
+  background: transparent;
+  // border: 1px solid red;
   margin-left: 3.5rem;
   margin-right: 3.5rem;
 
@@ -118,7 +120,8 @@ nav {
     // padding-left: 2.5px;
 
     // margin-right: 10px;
-    color: $white;
+    // color: $white;
+    color: var(--text);
     // border: 1px solid $secondary-color;
     // border-radius: 50%;
 
@@ -133,8 +136,27 @@ nav {
   .nav-item {
     padding-left: 10px;
   }
+
+  .nav-link {
+    color: lighten($primary-color, 50%);
+
+    // &:hover {
+    //   background: var(--text);
+    //   color: var(--text-inverse) !important;
+    // }
+  }
 }
 
 .selected a {
   color: $secondary-color !important;
+}
+
+.nav-scrolled {
+  --text: #{$red};
+  // --text-inverse: #f4f4f4;
+  // --background: #f4f4f4;
+  background: darken($dark-blue, 2.5);
+  // height: 100.8px;
+
+  box-shadow: 0 3px 20px rgba($black, 0.2);
 }
