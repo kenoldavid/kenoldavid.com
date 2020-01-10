@@ -3,44 +3,102 @@
 //! Using CSS Grid
 
 main {
-
   margin-top: 112px;
   margin-left: 3.5rem;
   margin-right: 3.5rem;
 
   &#about {
-    border: 1px solid $yellow;
+    // border: 1px solid $yellow;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-
     padding-bottom: 0;
 
-    h1, 
+    h1,
     h2 {
       line-height: $default-line-height - 0.5;
     }
 
+    #intro {
+      border-bottom: 4px solid $blue;
+
+      margin-left: -96px;
+      margin-right: -96px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include page-jumbotron-image();
+      background-color: #616066;
+      background-image: $landing-page-image;
+      background-position: $default-body-bg-position;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-blend-mode: normal;
+      z-index: 1;
+
+      h1,
+      p {
+        // width: 50%;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        // border: 1px solid $red;
+        // margin-left: 8rem;
+        font-family: "Varela Round", sans-serif;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 100px;
+      }
+
+      p {
+        // border: 1px solid $blue;
+        // margin-right: 8rem;
+        // padding-left: 15px;
+        padding-top: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+    }
+
     .about-info {
+      margin-left: 40px;
       display: grid;
       grid-template-areas:
         "img  bio  bio"
-        "link bio  bio"
-        "link bio  bio"
-        "hdr  hdr  hdr"
-        "job1 job2 job3"
+        "why why  why"
+        "why why  why"
+        // "hdr  hdr  hdr"
+        // "job1 job2 job3"
         "site site site ";
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 20px;
-      grid-row-gap: 30px;
+      grid-row-gap: 50px;
 
       // gap: 30px;
       // grid-gap: 10px;
 
       // border: 2px solid $red;
       // background-color: $white;
+
+      .bio {
+        &::after {
+          content: "";
+          border-left: 1px solid $black;
+          border-right: 1px solid $black;
+          border-bottom: 1px solid $black;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+      }
 
       .bio-img {
         grid-area: img;
@@ -51,18 +109,21 @@ main {
         justify-content: center;
         align-items: center;
 
-        // background-color: $body-color;
         // background-color: $blue;
 
-        img {
-          width: 200px;
-          height: 200px;
-          background-size: cover;
-          background-position: 50% 50%;
-          opacity: 1;
-          border-radius: 50%;
-          border: solid 2px $white;
-        }
+        background-image: $default-portrait-image;
+        background-size: 60% 90%;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-blend-mode: normal;
+        opacity: 0.4;
+
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+        border-bottom: 1px solid $black;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
       } //! end .bio-img
 
       .bio {
@@ -70,66 +131,113 @@ main {
         // background-color: saddlebrown;
       } //! end .bio
 
-      .link {
-        grid-area: link;
+      .site-purpose {
+        grid-area: why;
+        // background-color: $yellow;
+        text-align: center;
 
-        display: flex;
-        flex-direction: column;
-        // justify-content: flex-end;
-        justify-content: space-evenly;
-        align-items: center;
-
-        // background-color: pink;
-        // background-color: $body-color;
-
-        a {
-          // margin-top: 1rem;
+        &::after {
+          content: "";
+          border: 1px solid $red;
+          border-radius: 50px;
         }
-      } //! end .link
+      } //! end .bio
 
-      .section-title {
-        grid-area: hdr;
-        // background-color: darkgreen;
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
-      } //! end .highlights
+      .bio,
+      .bio-img,
+      .site-purpose {
+        position: relative;
+        padding: 30px;
 
-      .job {
-        padding: 0.5rem;
-        background: lighten($dark-blue, 2);
-        // background: lighten($primary-color, 5);
-        // background: $dark-blue;
-        // background: $gray-900;
-        border-bottom: solid 5px $secondary-color;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        h2 {
+          padding-bottom: 18px;
+          font-family: "Cookie", cursive;
+          font-size: 2.5rem;
+          font-weight: 500;
+          // color: #ced4da;
+          letter-spacing: 4px;
+        }
 
-        h2,
-        h4 {
-          padding-bottom: 15px;
-          text-transform: capitalize;
+        p {
+          font-family: "Oxygen", sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          color: $gray-400;
+          letter-spacing: 2.1px;
+        }
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(35, 35, 42, 0.85);
+          opacity: 0.4;
+          z-index: -99;
         }
       }
 
-      .job-1 {
-        grid-area: job1;
-        // margin-top: -33px;
-        margin-top: -30px;
-      }
+      // .link {
+      //   grid-area: link;
 
-      .job-2 {
-        grid-area: job2;
-        margin-top: -30px;
-      }
+      //   display: flex;
+      //   flex-direction: column;
+      //   // justify-content: flex-end;
+      //   justify-content: space-evenly;
+      //   align-items: center;
 
-      .job-3 {
-        grid-area: job3;
-        margin-top: -30px;
-      } //! end .job, .job-1, .job-2, .job-3
+      //   background-color: pink;
+      //   // background-color: $body-color;
+
+      //   a {
+      //     // margin-top: 1rem;
+      //   }
+      // } //! end .link
+
+      // .section-title {
+      //   grid-area: hdr;
+      //   // background-color: darkgreen;
+      //   margin-bottom: 0.5rem;
+      //   padding: 0.5rem;
+      // } //! end .highlights
+
+      // .job {
+      //   padding: 0.5rem;
+      //   background: lighten($dark-blue, 2);
+      //   // background: lighten($primary-color, 5);
+      //   // background: $dark-blue;
+      //   // background: $gray-900;
+      //   border-bottom: solid 5px $secondary-color;
+      //   border-top-left-radius: 10px;
+      //   border-top-right-radius: 10px;
+
+      //   h2,
+      //   h4 {
+      //     padding-bottom: 15px;
+      //     text-transform: capitalize;
+      //   }
+      // }
+
+      // .job-1 {
+      //   grid-area: job1;
+      //   // margin-top: -33px;
+      //   margin-top: -30px;
+      // }
+
+      // .job-2 {
+      //   grid-area: job2;
+      //   margin-top: -30px;
+      // }
+
+      // .job-3 {
+      //   grid-area: job3;
+      //   margin-top: -30px;
+      // } //! end .job, .job-1, .job-2, .job-3
 
       .about-the-site {
         grid-area: site;
-        // margin-top: 50px;
         width: 60%;
         padding: 20px 50px;
 
@@ -141,13 +249,24 @@ main {
 
         // background: #006399;
         background: rgba(lighten($primary-color, 3), 0.5);
+        color: $gray-400;
 
         h1 {
-          margin-bottom: 1rem;
+          // margin-bottom: 1rem;
+          padding-bottom: 18px;
+          font-family: "Cookie", cursive;
+          font-size: 2.5rem;
+          font-weight: 500;
+          letter-spacing: 4px;
         }
 
-        font-family: $default-font-family-paragraphs;
-        
+        p, li {
+          font-family: "Oxygen", sans-serif;
+          font-weight: 500;
+          color: $gray-400;
+          letter-spacing: 2.1px;
+        }
+
       } //! end .about-the-site
     } //! end .about-info
   } // end element ID 'about'

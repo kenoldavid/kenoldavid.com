@@ -25,6 +25,30 @@
   }
 }
 
+@mixin page-jumbotron-image {
+  @if $show-about-image {
+    &#intro {
+      background-image: $landing-page-image;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 112px;        
+        left: 0;
+        background-image: var(--gradient);
+        background-size: 400%;
+        opacity: 0.75;
+        z-index: -1;
+        animation: bg-animation 30s infinite alternate;
+      }
+    }
+  }
+}
+
+
+
 
 // Extra extra small devices (portrait phones, less than 576px)
 @mixin mediaXXS {

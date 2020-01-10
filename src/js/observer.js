@@ -1,8 +1,8 @@
 const header = document.querySelector("header");
-const sectionOne = document.querySelector(".lg-heading");
+const sectionOne = document.querySelector(".large-heading");
 
 const sectionOneOptions = {
-    rootMargin: "-120px 0px 0px 0px"
+    rootMargin: "-112px 0px 0px 0px"
 };
 
 const sectionOneObserver =

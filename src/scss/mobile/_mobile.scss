@@ -4,6 +4,17 @@
   }
 
   main {
+    &#about {
+      .about-info {
+        .bio-img {
+          // background-image: $default-portrait-image;
+          background-image: url("../images/portraits/portrait-12.jpg");
+          background-size: 42% 87%;
+          background-position: left bottom;
+        }
+      }
+    }
+
     &#work {
       .projects {
         grid-template-columns: repeat(4, 1fr);
@@ -28,6 +39,18 @@
 
 //TODO - Tablets and Small Laptops (tablets, 768px and up)
 @include mediaMD {
+  // main {
+  //   &#about {
+  //     .about-info {
+  //       .bio-img {
+  //         // background-image: $default-portrait-image;
+  //         background-image: url("../images/portraits/portrait-12.jpg");
+  //         background-size: 60% 90%;
+  //         background-position: left bottom;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 //! SM Smartphones (max-width: 767.98px)

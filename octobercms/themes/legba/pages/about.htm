@@ -5,34 +5,44 @@ meta_title = "kenoldavid.com about me page"
 meta_description = "This is the official homepage for the kenoldavid.com website. Who is Kenol David?" 
 is_hidden = 0 
 ==
-<h1 class="lg-heading text-capitalize">
+<!-- <h1 class="lg-heading text-capitalize">
     {% content "about/header.htm" %}
 </h1>
 
 <h2 class="sm-heading text-capitalize">
     {% content "about/sub-header.htm" %}
-</h2>
+</h2> -->
+<section id="intro">
+    <h1 class="large-heading">
+        Nice to meet you
+    </h1>
+    <p class="text-uppercase">a little about kenol</p>
+</section>
 
 <div class="about-info">
 
     <div class="bio-img">
-        <img src="{{ './themes/legba/assets/dist/images/portrait-0.jpg' }}" alt="Portrait of Kenol David">
+        <!-- <img src="{{ './themes/legba/assets/dist/images/portrait-0.jpg' }}" alt="Portrait of Kenol David"> -->
     </div>
 
     <div class="bio">
         {% content "about/bio.htm" %}
     </div>
+    
+    <div class="site-purpose">
+        {% content "about/site.htm" %}
+    </div>
 
-    <div class="link">
+    <!-- <div class="link">
         <a href="#" class="btn btn-outline-dark text-capitalize">
             view linkedIn
         </a>
         <a href="#" class="btn btn-outline-dark text-capitalize">
             download resume
         </a>
-    </div>
+    </div> -->
 
-    <h1 class="section-title text-secondary text-capitalize">
+    <!-- <h1 class="section-title text-secondary text-capitalize">
         selected highlights
     </h1>
 
@@ -46,7 +56,7 @@ is_hidden = 0
 
     <div class="job job-3">
         {% content "about/job-3.htm" %}
-    </div>
+    </div> -->
 
     <div class="about-the-site">
         {% content "about/about-the-site.htm" %}
